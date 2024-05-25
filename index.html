@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>New Ecoescape</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    .hero-video {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .hero-video video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-section {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #f2f2f2;
+      font-family: Playball, sans-serif;
+      text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+    }
+
+    .hero-section h1, .hero-section h2 {
+      margin: 0;
+      padding: 0.3em;
+    }
+
+    .know-more-btn {
+      margin-top: 1em;
+      background-color: #F5F5DC;
+      color: black;
+      padding: 10px 20px;
+      font-size: 20px;
+      font-family: Lato;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .know-more-btn a{
+      text-decoration: none;
+      color: black;
+    }
+
+    .know-more-btn:hover {
+      background-color: black;
+      a{color: #F5F5DC;}
+    }
+
+    @media (max-width: 1024px) {
+      .hero-video {
+        text-align: center;
+        height: 73%;
+      }
+
+      .hero-section {
+        padding-left: 100px;
+      }
+
+      .hero-section h1 {
+        font-size: 2em;
+      }
+
+      .hero-section h2 {
+        font-size: 1.5em;
+      }
+
+      .know-more-btn {
+        font-size: 18px;
+        padding: 8px 16px;
+      }
+      .formcontainer{
+        width: 60%;
+        margin: auto;
+        background: #b6e7f6;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding-top: 50px;
+        margin-left: 400px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-image {
+        text-align: center;
+      }
+
+      .hero-section {
+        padding-left: 0px;
+      }
+
+      .hero-section h1 {
+        font-size: 1.8em;
+      }
+
+      .hero-section h2 {
+        font-size: 1.3em;
+      }
+
+      .know-more-btn {
+        font-size: 16px;
+        padding: 6px 12px;
+      }
+
+      #Facilities {
+        padding-left: 0px;
+      }
+
+      .amenities {
+        padding-left: 0px;
+        padding-top: 10%;
+      }
+
+      .formcontainer{
+        width: 90%;
+        margin: auto;
+        background: #b6e7f6;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding-top: 50px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-video {
+        text-align: center;
+        height: 85%;
+        margin-top: 30%;
+      }
+
+      .hero-section h1 {
+        font-size: 1.5em;
+      }
+
+      .hero-section h2 {
+        font-size: 1.2em;
+      }
+
+      .know-more-btn {
+        font-size: 14px;
+        padding: 4px 10px;
+      }
+    }
+
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+      width: 35px;
+      height: 35px;
+    }
+
+    .carousel-control-prev i, .carousel-control-next i {
+      font-size: 35px;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar-container">
+    <nav id="sidebar" class="img">
+        <div class="p-4">
+            <h1><a href="index.html" class="logo"><img src="logo-no-background.png" alt="Ecoescape Logo" class="logo-img"></a></h1>
+            <ul class="list-unstyled components mb-5">
+                <li class="active"><a href="#"> Home</a></li>
+                <li><a href="#"> About Us</a></li>
+                <li><a href="#"> Accommodation</a></li>
+                <li><a href="#"> Gallery</a></li>
+                <li><a href="#"> Tariffs</a></li>
+                <li><a href="#"> Contact Us</a></li>
+            </ul>
+            <div class="menu">
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+            </div>
+            <div class="footer">
+                <p>📞 +91 9667846787</p>
+                <p>📧 ecoescape.mukteshwar@gmail.com</p>
+            </div>
+        </div>
+    </nav>
+</div>
+
+  <div class="icon-bar">
+    <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+    <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+    <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.accuweather.com/en/in/mukteshwar/3014461/weather-forecast/3014461" class="weather"><i class="fa fa-cloud"></i></a>
+    <a href="tel:+91 9667846787" class="phone"><i class="fa-solid fa-phone"></i></a>
+</div>
+<a href="https://wa.me/919667846787?text=Name%3A%0AEmail%3A%0AMobile%20Number%3A%0AWhere%20are%20you%20from%3A%0ACheck%20In%3A%0ACheck%20Out%3A%0ANo%20of%20rooms%3A%0AType%20of%20rooms%3A%0A" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+
+  <div class="hero-video">
+    <video autoplay loop muted playsinline>
+      <source src="1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-section">
+      <h1>Welcome to Apple Country</h1>
+      <h2>EcoEscape Mukteshwar Awaits.</h2>
+      <button class="know-more-btn"><a href="#enquirenow">Make an Enquiry</a></button>
+    </div>
+  </div>
+
+  <div class="hero2">
+    <h1>Rooms</h1>
+    <p>Explore our cozy rooms with breathtaking views.</p>
+    <br>
+    <div class="rooms-container">
+      <div class="room">
+        <div class="room-container1">
+          <img src="image/room1.jpg" alt="Room 1" class="room1">
+        </div>              
+        <h2>One-Bedroom Villa</h2>
+        <!-- <h3>Rs. 4,011</h3> -->
+        <p>Crafted to indulge its guests, our Deluxe Room with Mountain/Hill Views offers a seamless fusion of luxury and security. With its sophisticated design and plush amenities, this room provides an elegant retreat tailored to meet your needs. From its refined decor to state-of-the-art facilities and services, including free Wi-Fi and a study room, every aspect is designed to elevate your comfort and privacy. Experience pampering and tranquility in our Deluxe Room with Mountain/Hill Views.</p>
+        <button style="background-color: #ecd857; border-radius: 10px; padding: 8px;">Book Now</button>
+        <button style="background-color: #ecd857; border-radius: 10px; padding: 8px;">Gallery</button>
+      </div>
+      <div class="room">
+        <div class="room-container2">
+          <img src="image/room2.jpeg" alt="Room 1" class="room2">
+        </div>  
+        <h2>Two Bedroom Villa with One Washroom</h2>
+        <!-- <h3>Rs. 4,641</h3> -->
+        <p>Designed to spoil our guests, our Mountain/Hill View Deluxe Room delivers a harmonious blend of opulence and safety. Its chic design and lavish amenities create a sophisticated sanctuary customized to fulfill your desires. From its tasteful embellishments to cutting-edge amenities like free Wi-Fi and a study room, every detail is meticulously crafted to enhance your comfort and seclusion. Immerse yourself in luxury and serenity in our Mountain/Hill View Deluxe Room.</p>
+        <button style="background-color: #ecd857; border-radius: 10px; padding: 8px;">Book Now</button>
+        <button style="background-color: #ecd857; border-radius: 10px; padding: 8px;">Gallery</button>
+      </div>
+      <div class="room">
+        <div class="room-container3">
+          <img src="image/room3.JPG" alt="Room 1" class="room3">
+        </div>  
+        <h2>Mountainview Apartment with 2 Washroom</h2>
+        <!-- <h3>Rs. 6,916</h3> -->
+        <p>Crafted to indulge our guests, our Mountain/Hill View Grand Suite offers an opulent fusion of luxury and security. With its chic design and extravagant amenities, this suite provides a refined sanctuary tailored to exceed your expectations. From its stylish accents to modern conveniences such as complimentary Wi-Fi and a dedicated study room, each aspect is meticulously designed to elevate your comfort and privacy. Immerse yourself in a world of luxury and tranquility in our Mountain/Hill View Grand Suite.</p>
+        <button style="background-color: #ecd857; border-radius: 10px; padding: 8px;">Book Now</button>
+        <button style="background-color: #ecd857; border-radius: 10px; padding: 8px;">Gallery</button>
+      </div>
+    </div>       
+  </div>
+
+  <div class="amenities">
+    <h1>Amenities</h1>
+  </div>
+  <section class="Amenities" id="Facilities">
+    <div class="fe-box">
+      <img src="image/freewifi.png" alt="" width="150" height="150">
+      <h5>Free Wi-Fi</h5>
+    </div>
+    <div class="fe-box">
+      <img src="image/openterrace.png" alt="" width="150" height="150">
+      <h5>Terrace</h5>
+    </div>
+    <div class="fe-box">
+      <img src="image/fireplace.png" alt="" width="150" height="150">
+      <h5>Fireplace</h5>
+    </div>
+    <div class="fe-box">
+      <img src="image/balcony.png" alt="" width="150" height="150">
+      <h5>Balcony</h5>
+    </div>
+    <div class="fe-box">
+      <img src="image/airpurifier.png" alt="" width="150" height="150">
+      <h5>Air Purifier</h5>
+    </div>
+    <div class="fe-box">
+      <img src="image/coffeemachine.jpg" alt="" width="150" height="150">
+      <h5>Coffee Machine</h5>
+    </div>
+  </section>
+
+  <section class="testimonial text-center">
+    <div class="container">
+      <div class="heading white-heading">
+        Testimonials
+      </div>
+      <div id="testimonial4" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-item active">
+            <div class="testimonial4_slide">
+              <img src="image\vishalsahu.jpg" class="img-circle img-responsive" />
+              <h4>Beautiful Location</h4>
+              <p>I am from Delhi, and it is super hot here in May. We visited Mukteshwar for 3 nights and chose Ecoescape Mukteshwar for its apartment-style accommodation, which allowed my family to stay closely together. We had 2 bedrooms with attached bathrooms, a living area, dining area, balcony, and a beautiful terrace full of roses. The host guided us on sightseeing spots and arranged cabs throughout our stay. The property is centrally located, close to Maha Dev Temple and a waterfall. We enjoyed a memorable stay, especially the stunning sunrise views from the property. The host offers long stays with a kitchen after July, and we plan to return for a longer stay as I work from home.</p>
+              <h3>Vishal Sahu</h3>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="testimonial4_slide">
+              <img src="image\shradha.jpg" class="img-circle img-responsive" />
+              <h4>Very Comfortable Stay</h4>
+              <p>The place is excellent and the food is very homely. Very neat and clean washrooms and bedrooms were cozy and very comfortable. The host was very helpful and the caretaker was polite. They have maintained the place very well. I WOULD HIGHLY RECOMMEND THIS PLACE IF YOU LOVE NATURE AND WANT TO SPEND SOME QUALITY TIME WITH FRIENDS AND FAMILY.</p>
+              <h3>Shradha</h3>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="testimonial4_slide">
+              <img src="image\nadeemkhan.jpg" class="img-circle img-responsive" />
+              <h4>Loved this place</h4>
+              <p>My partner and I stayed at Ecoescape and loved it. The place is new and has modern, clean rooms with all the facilities we needed. We got a great deal by booking over the phone, which gave us a whole apartment with a balcony, terrace access, and a lovely garden.
+                Finding the place was easy, and we enjoyed stunning sunrise views. The food was fresh and made to order, just like home cooking. Everything was clean and tidy, and we felt comfortable throughout our stay.           
+                Some highlights were the pleasant weather, fast WiFi, and the overall value for money. We'll definitely be coming back because the hospitality was fantastic.</p>
+              <h3>Nadeem Khan</h3>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="testimonial4_slide">
+              <img src="image\vanaja.jpg" class="img-circle img-responsive" />
+              <h4>A simple home stay.</h4>
+              <p>The rooms are well maintained with piping hot water which is a must in hills ratio, and linens are changed everyday and the house has ample space. Beautiful sunrise from the room is extra bonus. Simple home stay with simple food is always a good choice when one travel. We visited Mukteshwar temple, Baalu Garh falls trekking is really worth. Excellent arrangements. We also visited Dol ashram, Nageshwar temple where we stood awestruck at the wonders India has. What a beauty way back from 6th century. One can really spend a day . Beautiful stream going along the deodar forest and a cluster of small, big temples in a complex, and the meauseum is worth for life time.</p>
+              <h3>Vanaja</h3>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="testimonial4_slide">
+              <img src="image\jatendar.jpg" class="img-circle img-responsive" />
+              <h4>Great experience</h4>
+              <p>Excellent experience for my vist. We had nice homemade food and excellent hospitality by the caretaker DIWAN. Great veiw of Valley and morning Sunrise 🌅. In night sky was very clear I have never seen so many stars in my life living in a City. Wow I will visit again soon.</p>
+              <h3>Jatendar</h3>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonial4" data-bs-slide="prev">
+          <i class="fa fa-angle-left" aria-hidden="true"></i>
+          <span class="sr-only">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonial4" data-bs-slide="next">
+          <i class="fa fa-angle-right" aria-hidden="true"></i>
+          <span class="sr-only">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="enquirenow" id="enquirenow">
+    <div class="formcontainer">
+      <h2>Want to make a booking? Just tell us your:</h2>
+      <form action="https://api.web3forms.com/submit" method="POST" id="bookingForm">
+        <input type="hidden" name="access_key" value="f0971542-f6e4-4ea1-9d7a-7828a6101abd"/>
+        <input type="hidden" name="subject" value="New Booking Submission from Ecoescape">
+   
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+  
+        <label for="name">Name*</label>
+        <input type="text" id="name" name="name" required>
+  
+        <label for="email">Email*</label>
+        <input type="email" id="email" name="email" required>
+  
+        <label for="mobile">Mobile*</label>
+        <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+  
+        <label for="location">Where are you from?*</label>
+        <input type="text" id="location" name="location" required>
+  
+        <label for="occupation">What work do you do?*</label>
+        <input type="text" id="occupation" name="occupation" required>
+  
+        <label for="checkin">Check In*</label>
+        <input type="date" id="checkin" name="checkin" required>
+  
+        <label for="checkout">Check Out*</label>
+        <input type="date" id="checkout" name="checkout" required>
+  
+        <label for="adults">Adults*</label>
+        <input type="number" id="adults" name="adults" min="1" required>
+  
+        <label for="kids">Kids</label>
+        <input type="number" id="kids" name="kids" min="0">
+  
+        <label for="rooms">No of rooms?*</label>
+        <input type="number" id="rooms" name="rooms" min="1" required>
+  
+        <label for="roomType">Type of rooms?*</label>
+        <select id="roomType" name="roomType" required>
+          <option value="">Select</option>
+          <option value="One Bedroom Villa">One Bedroom Villa</option>
+          <option value="Two Bedroom Villa">Two Bedroom Villa</option>
+          <option value="Mountainview Apartment">Mountainview Apartment</option>
+        </select>
+  
+        <label for="extraBed">Need extra bed?*</label>
+        <select id="extraBed" name="extraBed" required>
+          <option value="">Select</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+  
+        <label for="driverStay">Need driver's stay?*</label>
+        <select id="driverStay" name="driverStay" required>
+          <option value="">Select</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+  
+        <label for="dog">Bringing your dog along?*</label>
+        <select id="dog" name="dog" required>
+          <option value="">Select</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+  
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments"></textarea>
+  
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </section>
+  
+  <script src="https://web3forms.com/client/script.js" async defer></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    const menu = document.querySelector('.menu');
+    const sidebar = document.querySelector('#sidebar');
+    const navbarItems = document.querySelectorAll('#sidebar .components li');
+  
+    menu.addEventListener('click', () => {
+        sidebar.classList.toggle('show');
+        navbarItems.forEach(item => {
+            item.classList.toggle('hide-icons');
+        });
+    });
+</script>
+
+
+
+<script>
+    document.getElementById('bookingForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    // Form validation logic
+    var form = event.target;
+    var name = form.name.value.trim();
+    var email = form.email.value.trim();
+    var mobile = form.mobile.value.trim();
+    var location = form.location.value.trim();
+    var occupation = form.occupation.value.trim();
+    var checkin = form.checkin.value;
+    var checkout = form.checkout.value;
+    var adults = form.adults.value.trim();
+    var rooms = form.rooms.value.trim();
+    var roomType = form.roomType.value.trim();
+    var extraBed = form.extraBed.value;
+    var driverStay = form.driverStay.value;
+    var dog = form.dog.value;
+    var captcha = form.captcha.value.trim();
+
+    if (!name || !email || !mobile || !location || !occupation || !checkin || !checkout || !adults || !rooms || !roomType || !extraBed || !driverStay || !dog || !captcha) {
+        alert('Please fill in all required fields.');
+        return;
+    }
+
+    if (!validateEmail(email)) {
+        alert('Please enter a valid email address.');
+        return;
+    }
+
+    if (!validateMobile(mobile)) {
+        alert('Please enter a valid 10-digit mobile number.');
+        return;
+    }
+
+    alert('Form submitted successfully!');
+    form.reset();
+});
+
+function validateEmail(email) {
+    var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+}
+
+function validateMobile(mobile) {
+    return /^[0-9]{10}$/.test(mobile);
+}
+
+  </script>
+</body>
+</html>
