@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Carousel</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="rooms.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        .room-button {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .room-button img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .room-button span {
+            display: inline;
+        }
+
+        .carousel-controls {
+            display: none;
+        }
+
+        .carousel-inner {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 767.98px) {
+            .room-button span {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar-container">
+        <nav id="sidebar" class="img">
+            <div class="p-4">
+                <h1><a href="index.html" class="logo"><img src="logo-no-background.png" alt="Ecoescape Logo" class="logo-img"></a></h1>
+                <ul class="list-unstyled components mb-5">
+                    <li class="active"><a href="index.html"> Home</a></li>
+                    <li><a href="#"> About Us</a></li>
+                    <li><a href="rooms.html"> Rooms</a></li>
+                    <li><a href="#"> Gallery</a></li>
+                    <li><a href="#"> Tariffs</a></li>
+                    <li><a href="#"> Contact Us</a></li>
+                </ul>
+                <div class="menu">
+                    <div class="menu-line"></div>
+                    <div class="menu-line"></div>
+                    <div class="menu-line"></div>
+                </div>
+                <div class="footer">
+                    <p>📞 +91 9667846787</p>
+                    <p>📧 ecoescape.mukteshwar@gmail.com</p>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="icon-bar">
+        <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.accuweather.com/en/in/mukteshwar/3014461/weather-forecast/3014461" class="weather"><i class="fa fa-cloud"></i></a>
+        <a href="tel:+91 9667846787" class="phone"><i class="fa-solid fa-phone"></i></a>
+    </div>
+    <a href="https://wa.me/919667846787?text=Name%3A%0AEmail%3A%0AMobile%20Number%3A%0AWhere%20are%20you%20from%3A%0ACheck%20In%3A%0ACheck%20Out%3A%0ANo%20of%20rooms%3A%0AType%20of%20rooms%3A%0A" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+    
+    <div class="container mt-5">
+        <div class="roomsheading">
+            <h1>ROOMS & SUITES</h1>
+        </div>
+        <div class="d-flex justify-content-center flex-wrap">
+            <div class="room-button" data-target="#carouselExampleIndicators" data-slide-to="0">
+                <img src="image/room1.jpg" alt="Room 1">
+                <span>One-Bedroom Villa</span>
+            </div>
+            <div class="room-button" data-target="#carouselExampleIndicators" data-slide-to="1">
+                <img src="image/room2.jpeg" alt="Room 2">
+                <span>Two Bedroom Villa</span>
+            </div>
+            <div class="room-button" data-target="#carouselExampleIndicators" data-slide-to="2">
+                <img src="image/room3.JPG" alt="Room 3">
+                <span>Mountainview Apartment</span>
+            </div>
+        </div>
+
+        <div id="carouselExampleIndicators" class="carousel slide mt-4" data-ride="carousel" data-interval="3000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="image/room1.jpg" class="d-block w-100" alt="Room 1">
+                        </div>
+                        <div class="col-md-6 d-flex flex-column justify-content-center">
+                            <h3>One-Bedroom Villa</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                            <ul>
+                                <li>Tea Coffee Maker</li>
+                                <li>LCD TV</li>
+                                <li>Electronic Safe</li>
+                                <li>Wi-Fi</li>
+                                <li>Phone</li>
+                            </ul>
+                            <button class="btn btn-primary">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="image/room2.jpeg" class="d-block w-100" alt="Room 2">
+                        </div>
+                        <div class="col-md-6 d-flex flex-column justify-content-center">
+                            <h3>Two Bedroom Villa</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                            <ul>
+                                <li>Tea Coffee Maker</li>
+                                <li>LCD TV</li>
+                                <li>Electronic Safe</li>
+                                <li>Wi-Fi</li>
+                                <li>Phone</li>
+                            </ul>
+                            <button class="btn btn-primary">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="image/room3.JPG" class="d-block w-100" alt="Room 3">
+                        </div>
+                        <div class="col-md-6 d-flex flex-column justify-content-center">
+                            <h3>Mountainview Apartment</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                            <ul>
+                                <li>Tea Coffee Maker</li>
+                                <li>LCD TV</li>
+                                <li>Electronic Safe</li>
+                                <li>Wi-Fi</li>
+                                <li>Phone</li>
+                            </ul>
+                            <button class="btn btn-primary">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev carousel-controls" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next carousel-controls" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script>
+        $('.carousel').carousel({
+            interval: 3000
+        });
+
+        // Enable touch/swipe functionality
+        $(".carousel").on("touchstart", function (event) {
+            var xClick = event.originalEvent.touches[0].pageX;
+            $(this).one("touchmove", function (event) {
+                var xMove = event.originalEvent.touches[0].pageX;
+                if (Math.floor(xClick - xMove) > 5) {
+                    $(this).carousel('next');
+                } else if (Math.floor(xClick - xMove) < -5) {
+                    $(this).carousel('prev');
+                }
+            });
+            $(".carousel").on("touchend", function () {
+                $(this).off("touchmove");
+            });
+        });
+    </script>
+    <script>
+        const menu = document.querySelector('.menu');
+        const sidebar = document.querySelector('#sidebar');
+        const navbarItems = document.querySelectorAll('#sidebar .components li');
+      
+        menu.addEventListener('click', () => {
+            sidebar.classList.toggle('show');
+            navbarItems.forEach(item => {
+                item.classList.toggle('hide-icons');
+            });
+        });
+    </script>
+</body>
+
+</html>
