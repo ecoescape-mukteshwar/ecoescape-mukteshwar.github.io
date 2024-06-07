@@ -132,7 +132,7 @@ body {
   
   /* Logo Image */
   .logo-img {
-	width: 100%;
+	width: 70%;
 	height: auto;
   }
 
@@ -209,7 +209,7 @@ body {
 
 @media (max-width: 900px) {
 	.logo-img {
-		width: 60%;
+		width: 20%;
 		height: auto;
 	  }
   
