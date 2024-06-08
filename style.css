@@ -93,7 +93,7 @@
   
   /* Logo Image */
   .logo-img {
-	width: 100%;
+	width:60%;
 	height: auto;
   }
 
@@ -939,7 +939,7 @@ header .carousel-inner .item {
   /* Media Queries */
   @media (max-width: 900px) {
 	.logo-img {
-		width: 60%;
+		width: 20%;
 		height: auto;
 	  }
   
