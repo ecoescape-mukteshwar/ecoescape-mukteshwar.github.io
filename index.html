@@ -125,14 +125,14 @@
   <div class="navbar-container">
     <nav id="sidebar" class="img">
         <div class="p-4">
-            <h1><a href="index.html" class="logo"><img src="image\LOGO-removebg-preview.png" alt="Ecoescape Logo" class="logo-img"></a></h1>
+            <h1><a href="index.html" class="logo"><img src="image/LOGO-removebg-preview.avif" alt="Ecoescape Logo" class="logo-img"></a></h1>
             <ul class="list-unstyled components mb-5">
-                <li class="active"><a href="/"> Home</a></li>
-                <li><a href="#enquirenow"> About Us</a></li>
-                <li><a href="rooms.html"> Rooms</a></li>
-                <li><a href="#enquirenow"> Gallery</a></li>
-                <li><a href="#enquirenow"> Tariffs</a></li>
-                <li><a href="#enquirenow"> Contact Us</a></li>
+                <li id="home-nav" class="nav-item"><a href="index.html"> Home</a></li>
+                <li id="about-nav" class="nav-item"><a href="about.html"> About Us</a></li>
+                <li id="rooms-nav" class="nav-item"><a href="rooms.html"> Rooms</a></li>
+                <li id="gallery-nav" class="nav-item"><a href="gallery.html"> Gallery</a></li>
+                <li id="tariffs-nav" class="nav-item"><a href="tariffs.html"> Tariffs</a></li>
+                <li id="contact-nav" class="nav-item"><a href="contact.html"> Contact Us</a></li>
             </ul>
             <div class="menu">
                 <div class="menu-line"></div>
@@ -147,6 +147,34 @@
     </nav>
 </div>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+      // Get the current URL path
+      var path = window.location.pathname;
+  
+      // Map paths to corresponding navbar item IDs
+      var navItems = {
+          "/": "home-nav",
+          "/index.html": "home-nav",
+          "/about.html": "about-nav",
+          "/rooms.html": "rooms-nav",
+          "/gallery.html": "gallery-nav",
+          "/tariffs.html": "tariffs-nav",
+          "/contact.html": "contact-nav"
+      };
+  
+      // Get the ID of the navbar item to activate
+      var activeNavId = navItems[path];
+  
+      // Add the 'active' class to the corresponding navbar item
+      if (activeNavId) {
+          document.getElementById(activeNavId).classList.add("active");
+      }
+  });
+  </script>
+  
+
+
   <div class="icon-bar">
     <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
     <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
@@ -159,107 +187,129 @@
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
-      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
   </ol>
 
-  <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
-      <div class="item active">
-          <div class="banner" style="background-image: url(img1.jpg);"></div>
-          <div class="carousel-caption">
-              <h2 class="animated bounceInRight" style="animation-delay: 1s">Welcome to <span>Apple Country</span></h2>
-              <h3 class="animated bounceInLeft" style="animation-delay: 2s">Ecoescape Mukteshwar Awaits</h3>
-              <p class="animated bounceInRight" style="animation-delay: 3s"><a href="#enquirenow">Make an Enquiry</a></p>
-          </div>
+    <div class="item active">
+      <div class="banner lazy-load" data-bg="img1.avif"></div>
+      <div class="carousel-caption">
+        <h2>Welcome to <span>Apple Country</span></h2>
+        <h3>Ecoescape Mukteshwar Awaits</h3>
+        <p><a href="#enquirenow">Make an Enquiry</a></p>
       </div>
-      <div class="item">
-          <div class="banner" style="background-image: url(img2.jpg);"></div>
-          <div class="carousel-caption">
-              <h2 class="animated slideInDown" style="animation-delay: 1s">Discover <span>Ecoescape</span></h2>
-              <h3 class="animated fadeInUp" style="animation-delay: 2s">Where Nature Beckons</h3>
-              <p class="animated zoomIn" style="animation-delay: 3s"><a href="#">Learn More About Us</a></p>
-          </div>
+    </div>
+    <div class="item">
+      <div class="banner lazy-load" data-bg="img2.jpg"></div>
+      <div class="carousel-caption">
+        <h2>Discover <span>Ecoescape</span></h2>
+        <h3>Where Nature Beckons</h3>
+        <p><a href="#">Learn More About Us</a></p>
       </div>
-      <div class="item">
-          <div class="banner" style="background-image: url(img3.jpg);"></div>
-          <div class="carousel-caption">
-              <h2 class="animated zoomIn" style="animation-delay: 1s">Experience <span>Comfort</span></h2>
-              <h3 class="animated fadeInLeft" style="animation-delay: 2s">Luxurious Rooms with Stunning Views</h3>
-              <p class="animated zoomIn" style="animation-delay: 3s"><a href="#">Explore Our Rooms</a></p>
-          </div>
+    </div>
+    <div class="item">
+      <div class="banner lazy-load" data-bg="img3.jpg"></div>
+      <div class="carousel-caption">
+        <h2>Experience <span>Comfort</span></h3>
+        <h3>Luxurious Rooms with Stunning Views</h3>
+        <p><a href="#">Explore Our Rooms</a></p>
       </div>
-      <div class="item">
-          <div class="banner" style="background-image: url(img4.jpg);"></div>
-          <div class="carousel-caption">
-              <h2 class="animated slideInDown" style="animation-delay: 1s">Captivating <span>Views</span></h2>
-              <h3 class="animated fadeInUp" style="animation-delay: 2s">Explore Our Scenic Surroundings</h3>
-              <p class="animated zoomIn" style="animation-delay: 3s"><a href="#">View Our Gallery</a></p>
-          </div>
+    </div>
+    <div class="item">
+      <div class="banner lazy-load" data-bg="img4.avif"></div>
+      <div class="carousel-caption">
+        <h2>Captivating <span>Views</span></h2>
+        <h3>Explore Our Scenic Surroundings</h3>
+        <p><a href="#">View Our Gallery</a></p>
       </div>
-      <div class="item">
-          <div class="banner" style="background-image: url(img5.jpg);"></div>
-          <div class="carousel-caption">
-              <h2 class="animated zoomIn" style="animation-delay: 1s">Get in <span>Touch</span></h2>
-              <h3 class="animated fadeInLeft" style="animation-delay: 2s">We're Here to Help You</h3>
-              <p class="animated zoomIn" style="animation-delay: 3s"><a href="#">Contact us</a></p>
-          </div>
+    </div>
+    <div class="item">
+      <div class="banner lazy-load" data-bg="img5.jpg"></div>
+      <div class="carousel-caption">
+        <h2>Get in <span>Touch</span></h2>
+        <h3>We're Here to Help You</h3>
+        <p><a href="#">Contact us</a></p>
       </div>
-
+    </div>
   </div>
-
   <!-- Controls -->
   <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
   </a>
   <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
   </a>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        // Initialize carousel
+        $('#carousel-example-generic').carousel();
+
+        // Lazy loading images
+        var lazyImages = document.querySelectorAll(".lazy-load[data-bg]");
+        lazyImages.forEach(function(img) {
+          var observer = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(entry) {
+              if (entry.isIntersecting) {
+                var image = new Image();
+                image.src = img.getAttribute("data-bg");
+                image.onload = function() {
+                  img.style.backgroundImage = "url('" + img.getAttribute("data-bg") + "')";
+                };
+                observer.unobserve(img);
+              }
+            });
+          }, { rootMargin: "0px 0px 100px 0px" }); // Adjust root margin as needed
+          observer.observe(img);
+        });
+      });
+    </script>
 </div>
 
 
 
-  <div class="hero2">
+   <div class="hero2">
     <h1>Rooms</h1>
     <p>Explore our cozy rooms with breathtaking views.</p>
     <br>
     <div class="rooms-container">
       <div class="room">
         <div class="room-container1">
-          <img src="image/room1.jpg" alt="Room 1" class="room1">
-        </div>              
+          <img src="image/room1.avif" alt="Room 1" class="room1">
+        </div>
         <h2>One-Bedroom Villa</h2>
-        <!-- <h3>Rs. 4,011</h3> -->
         <p>Crafted to indulge its guests, our Deluxe Room with Mountain/Hill Views offers a seamless fusion of luxury and security. With its sophisticated design and plush amenities, this room provides an elegant retreat tailored to meet your needs. From its refined decor to state-of-the-art facilities and services, including free Wi-Fi and a study room, every aspect is designed to elevate your comfort and privacy. Experience pampering and tranquility in our Deluxe Room with Mountain/Hill Views.</p>
         <button style="background-color: #ecd857; border-radius: 10px; padding: 8px;">Tariff</button>
         <button style="background-color: #ecd857; border-radius: 10px; padding: 8px;">Gallery</button>
       </div>
       <div class="room">
         <div class="room-container2">
-          <img src="image/room2.jpeg" alt="Room 1" class="room2">
-        </div>  
+          <img src="image/room2.avif" alt="Room 2" class="room2">
+        </div>
         <h2>Two Bedroom Villa with One Washroom</h2>
-        <!-- <h3>Rs. 4,641</h3> -->
         <p>Designed to spoil our guests, our Mountain/Hill View Deluxe Room delivers a harmonious blend of opulence and safety. Its chic design and lavish amenities create a sophisticated sanctuary customized to fulfill your desires. From its tasteful embellishments to cutting-edge amenities like free Wi-Fi and a study room, every detail is meticulously crafted to enhance your comfort and seclusion. Immerse yourself in luxury and serenity in our Mountain/Hill View Deluxe Room.</p>
         <button style="background-color: #ecd857; border-radius: 10px; padding: 8px;">Tariff</button>
         <button style="background-color: #ecd857; border-radius: 10px; padding: 8px;">Gallery</button>
       </div>
       <div class="room">
         <div class="room-container3">
-          <img src="image/room3.JPG" alt="Room 1" class="room3">
-        </div>  
+          <img src="image/room3.avif" alt="Room 3" class="room3">
+        </div>
         <h2>Mountainview Apartment with 2 Washroom</h2>
-        <!-- <h3>Rs. 6,916</h3> -->
         <p>Crafted to indulge our guests, our Mountain/Hill View Grand Suite offers an opulent fusion of luxury and security. With its chic design and extravagant amenities, this suite provides a refined sanctuary tailored to exceed your expectations. From its stylish accents to modern conveniences such as complimentary Wi-Fi and a dedicated study room, each aspect is meticulously designed to elevate your comfort and privacy. Immerse yourself in a world of luxury and tranquility in our Mountain/Hill View Grand Suite.</p>
         <button style="background-color: #ecd857; border-radius: 10px; padding: 8px;">Tariff</button>
         <button style="background-color: #ecd857; border-radius: 10px; padding: 8px;">Gallery</button>
       </div>
-    </div>       
+    </div>
   </div>
 
   <div class="amenities">
@@ -269,52 +319,52 @@
     <div class="slider">
       <div class="slide-track">
         <div class="slide">
-          <img src="amenitiesimages\wifi.png" height="100" width="250" alt="" />
+          <img src="amenitiesimages\wifi.avif" height="100" width="250" alt="" />
         </div>
         <div class="slide">
-          <img src="amenitiesimages\terrace.png" height="100" width="250" alt="" />
+          <img src="amenitiesimages\terrace.avif" height="100" width="250" alt="" />
         </div>
         <div class="slide">
-          <img src="amenitiesimages\garden.png" height="100" width="250" alt="" />
+          <img src="amenitiesimages\garden.avif" height="100" width="250" alt="" />
         </div>
         <div class="slide">
-          <img src="amenitiesimages\restaurant.png" height="100" width="250" alt="" />
+          <img src="amenitiesimages\restaurant.avif" height="100" width="250" alt="" />
         </div>
         <div class="slide">
-          <img src="amenitiesimages\roomservice.png" height="100" width="250" alt="" />
+          <img src="amenitiesimages\roomservice.avif" height="100" width="250" alt="" />
         </div>
         <div class="slide">
-          <img src="amenitiesimages\kettle.png" height="100" width="250" alt="" />
+          <img src="amenitiesimages\kettle.avif" height="100" width="250" alt="" />
         </div>
         <div class="slide">
-          <img src="amenitiesimages\toiletries.png" height="100" width="250" alt="" />
+          <img src="amenitiesimages\toiletries.avif" height="100" width="250" alt="" />
         </div>
         <div class="slide">
-          <img src="amenitiesimages\parking.png" height="100" width="250" alt="" />
+          <img src="amenitiesimages\parking.avif" height="100" width="250" alt="" />
         </div>
         <div class="slide">
-          <img src="amenitiesimages\taxi.png" height="100" width="250" alt="" />
+          <img src="amenitiesimages\taxi.avif" height="100" width="250" alt="" />
         </div>
         <div class="slide">
-          <img src="amenitiesimages\wifi.png" height="100" width="250" alt="" />
+          <img src="amenitiesimages\wifi.avif" height="100" width="250" alt="" />
         </div>
         <div class="slide">
-          <img src="amenitiesimages\terrace.png" height="100" width="250" alt="" />
+          <img src="amenitiesimages\terrace.avif" height="100" width="250" alt="" />
         </div>
         <div class="slide">
-          <img src="amenitiesimages\garden.png" height="100" width="250" alt="" />
+          <img src="amenitiesimages\garden.avif" height="100" width="250" alt="" />
         </div>
         <div class="slide">
-          <img src="amenitiesimages\restaurant.png" height="100" width="250" alt="" />
+          <img src="amenitiesimages\restaurant.avif" height="100" width="250" alt="" />
         </div>
         <div class="slide">
-          <img src="amenitiesimages\roomservice.png" height="100" width="250" alt="" />
+          <img src="amenitiesimages\roomservice.avif" height="100" width="250" alt="" />
         </div>
         <div class="slide">
-          <img src="amenitiesimages\kettle.png" height="100" width="250" alt="" />
+          <img src="amenitiesimages\kettle.avif" height="100" width="250" alt="" />
         </div>
         <div class="slide">
-          <img src="amenitiesimages\toiletries.png" height="100" width="250" alt="" />
+          <img src="amenitiesimages\toiletries.avif" height="100" width="250" alt="" />
         </div>
       </div>
     </div>
@@ -343,7 +393,7 @@
             <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active">
                     <div class="testimonial4_slide">
-                        <img src="image/vishalsahu.jpg" class="img-circle img-responsive" />
+                        <img src="image/vishalsahu.avif" class="img-circle img-responsive" />
                         <h4>Beautiful Location</h4>
                         <p data-full-text="I am from Delhi, and it is super hot here in May. We visited Mukteshwar for 3 nights and chose Ecoescape Mukteshwar for its apartment-style accommodation, which allowed my family to stay closely together. We had 2 bedrooms with attached bathrooms, a living area, dining area, balcony, and a beautiful terrace full of roses. The host guided us on sightseeing spots and arranged cabs throughout our stay. The property is centrally located, close to Maha Dev Temple and a waterfall. We enjoyed a memorable stay, especially the stunning sunrise views from the property. The host offers long stays with a kitchen after July, and we plan to return for a longer stay as I work from home.">
                             I am from Delhi, and it is super hot here in May. We visited Mukteshwar for 3 nights and chose Ecoescape Mukteshwar for its apartment-style accommodation, which allowed my family to stay closely together. We had 2 bedrooms... <span class="read-more">Read more</span>
@@ -353,7 +403,7 @@
                 </div>
                 <div class="carousel-item">
                     <div class="testimonial4_slide">
-                        <img src="image/shradha.jpg" class="img-circle img-responsive" />
+                        <img src="image/shradha.avif" class="img-circle img-responsive" />
                         <h4>Very Comfortable Stay</h4>
                         <p data-full-text="The place is excellent and the food is very homely. Very neat and clean washrooms and bedrooms were cozy and very comfortable. The host was very helpful and the caretaker was polite. They have maintained the place very well. I would highly recommend this place if you love nature and want to spend some quality time with friends and family.">
                             The place is excellent and the food is very homely. Very neat and clean washrooms and bedrooms were cozy and very comfortable. The host was very helpful and the caretaker was polite. They have maintained the place very well... <span class="read-more">Read more</span>
@@ -363,7 +413,7 @@
                 </div>
                 <div class="carousel-item">
                     <div class="testimonial4_slide">
-                        <img src="image/nadeemkhan.jpg" class="img-circle img-responsive" />
+                        <img src="image/nadeemkhan.avif" class="img-circle img-responsive" />
                         <h4>Loved this place</h4>
                         <p data-full-text="My partner and I stayed at Ecoescape and loved it. The place is new and has modern, clean rooms with all the facilities we needed. We got a great deal by booking over the phone, which gave us a whole apartment with a balcony, terrace access, and a lovely garden. Finding the place was easy, and we enjoyed stunning sunrise views. The food was fresh and made to order, just like home cooking. Everything was clean and tidy, and we felt comfortable throughout our stay. Some highlights were the pleasant weather, fast WiFi, and the overall value for money. We'll definitely be coming back because the hospitality was fantastic.">
                             My partner and I stayed at Ecoescape and loved it. The place is new and has modern, clean rooms with all the facilities we needed. We got a great deal by booking over the phone, which gave us a whole apartment with a balcony, terrace access,... <span class="read-more">Read more</span>
@@ -373,7 +423,7 @@
                 </div>
                 <div class="carousel-item">
                     <div class="testimonial4_slide">
-                        <img src="image/vanaja.jpg" class="img-circle img-responsive" />
+                        <img src="image/vanaja.avif" class="img-circle img-responsive" />
                         <h4>A simple home stay.</h4>
                         <p data-full-text="The rooms are well maintained with piping hot water which is a must in hills ratio, and linens are changed everyday and the house has ample space. Beautiful sunrise from the room is extra bonus. Simple home stay with simple food is always a good choice when one travel. We visited Mukteshwar temple, Baalu Garh falls trekking is really worth. Excellent arrangements. We also visited Dol ashram, Nageshwar temple where we stood awestruck at the wonders India has. What a beauty way back from 6th century. One can really spend a day. Beautiful stream going along the deodar forest and a cluster of small, big temples in a complex, and the museum is worth for life time.">
                             The rooms are well maintained with piping hot water which is a must in hills ratio, and linens are changed everyday and the house has ample space. Beautiful sunrise from the room is extra bonus. Simple home stay with simple food is always a ... <span class="read-more">Read more</span>
@@ -383,7 +433,7 @@
                 </div>
                 <div class="carousel-item">
                     <div class="testimonial4_slide">
-                        <img src="image/jatendar.jpg" class="img-circle img-responsive" />
+                        <img src="image/jatendar.avif" class="img-circle img-responsive" />
                         <h4>Great experience</h4>
                         <p data-full-text="Excellent experience for my vist. We had nice homemade food and excellent hospitality by the caretaker DIWAN. Great veiw of Valley and morning Sunrise 🌅. In night sky was very clear I have never seen so many stars in my life living in a City. Wow I will visit again soon.">
                             Excellent experience for my visit. We had nice homemade food and excellent hospitality by the caretaker DIWAN. Great view of Valley and morning Sunrise 🌅. In night sky was very clear I have never seen so many stars in my life living in a City... <span class="read-more">Read more</span>
@@ -516,115 +566,125 @@
   </div>
 </section>
   
-  <script src="https://web3forms.com/client/script.js" async defer></script>  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+  <script>
+    // Lazy load the web3forms script asynchronously
+    (function() {
+      var script = document.createElement('script');
+      script.src = 'https://web3forms.com/client/script.js';
+      script.async = true;
+      document.body.appendChild(script);
+    })();
+  </script>
+  
+  <!-- Combine and minify jQuery, Popper.js, and Bootstrap scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"></script>
-  <script src="js/jquery.min.js"></script>
-  <script src="js/popper.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  
+  <!-- Your custom scripts -->
   <script src="js/main.js"></script>
   <script>
-    const menu = document.querySelector('.menu');
-    const sidebar = document.querySelector('#sidebar');
-    const navbarItems = document.querySelectorAll('#sidebar .components li');
-  
-    menu.addEventListener('click', () => {
-        sidebar.classList.toggle('show');
-        navbarItems.forEach(item => {
-            item.classList.toggle('hide-icons');
-        });
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const readMoreTexts = document.querySelectorAll('.testimonial p[data-full-text]');
+    // Optimize menu toggle script
+    document.addEventListener('DOMContentLoaded', () => {
+      const menu = document.querySelector('.menu');
+      const sidebar = document.querySelector('#sidebar');
+      const navbarItems = document.querySelectorAll('#sidebar .components li');
     
-    readMoreTexts.forEach((element) => {
-        const fullText = element.getAttribute('data-full-text');
-        const truncatedText = element.textContent.split('...')[0] + '...';
-
-        element.addEventListener('click', (e) => {
-            const readMoreSpan = e.target.closest('.read-more');
-            if (readMoreSpan) {
-                if (element.classList.contains('expanded')) {
-                    element.innerHTML = truncatedText + ' <span class="read-more">Read more</span>';
-                    element.classList.remove('expanded');
-                } else {
-                    element.innerHTML = fullText + ' <span class="read-more">Read less</span>';
-                    element.classList.add('expanded');
-                }
-                e.stopPropagation();
-            }
-        });
+      menu.addEventListener('click', () => {
+          sidebar.classList.toggle('show');
+          navbarItems.forEach(item => {
+              item.classList.toggle('hide-icons');
+          });
+      });
     });
-});
-
-</script>
-
-
-
-<script>
-  document.getElementById('bookingForm').addEventListener('submit', function(event) {
-      event.preventDefault();
-
-      // Form validation logic
-      var form = event.target;
-      var name = form.name.value.trim();
-      var email = form.email.value.trim();
-      var mobile = form.mobile.value.trim();
-      var location = form.location.value.trim();
-      var occupation = form.occupation.value.trim();
-      var checkin = form.checkin.value;
-      var checkout = form.checkout.value;
-      var adults = form.adults.value.trim();
-      var kids = form.kids.value.trim();
-      var rooms = form.rooms.value.trim();
-      var roomType = form.roomType.value;
-      var extraBed = form.extraBed.value;
-      var driverStay = form.driverStay.value;
-      var dog = form.dog.value;
-      var comments = form.comments.value.trim();
-
-      if (!name || !email || !mobile || !location || !occupation || !checkin || !checkout || !adults || !rooms || !roomType || !extraBed || !driverStay || !dog) {
-          alert('Please fill in all required fields.');
-          return;
-      }
-
-      if (!validateEmail(email)) {
-          alert('Please enter a valid email address.');
-          return;
-      }
-
-      if (!validateMobile(mobile)) {
-          alert('Please enter a valid 10-digit mobile number.');
-          return;
-      }
-
-      // Submit to Web3Forms
-      form.submit();
-
-      // Create WhatsApp message
-      var whatsappMessage = `Name: ${name}%0AEmail: ${email}%0AMobile: ${mobile}%0AWhere are you from: ${location}%0AWhat work do you do: ${occupation}%0ACheck In: ${checkin}%0ACheck Out: ${checkout}%0AAdults: ${adults}%0AKids: ${kids}%0ANo of rooms: ${rooms}%0AType of rooms: ${roomType}%0ANeed extra bed: ${extraBed}%0ANeed driver's stay: ${driverStay}%0ABringing your dog along: ${dog}%0AComments: ${comments}`;
-
-      // Redirect to WhatsApp
-      var whatsappUrl = `https://wa.me/919667846787?text=${whatsappMessage}`;
-      window.open(whatsappUrl, '_blank');
-
-      // Reset form after submission
-      form.reset();
-  });
-
-  function validateEmail(email) {
-      var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return re.test(String(email).toLowerCase());
-  }
-
-  function validateMobile(mobile) {
-      return /^[0-9]{10}$/.test(mobile);
-  }
-</script>
+  </script>
+  
+  <script>
+    // Optimize read more script
+    document.addEventListener('DOMContentLoaded', () => {
+      const readMoreTexts = document.querySelectorAll('.testimonial p[data-full-text]');
+      
+      readMoreTexts.forEach((element) => {
+          const fullText = element.getAttribute('data-full-text');
+          const truncatedText = element.textContent.split('...')[0] + '...';
+  
+          element.addEventListener('click', (e) => {
+              const readMoreSpan = e.target.closest('.read-more');
+              if (readMoreSpan) {
+                  if (element.classList.contains('expanded')) {
+                      element.innerHTML = truncatedText + ' <span class="read-more">Read more</span>';
+                      element.classList.remove('expanded');
+                  } else {
+                      element.innerHTML = fullText + ' <span class="read-more">Read less</span>';
+                      element.classList.add('expanded');
+                  }
+                  e.stopPropagation();
+              }
+          });
+      });
+    });
+  </script>
+  
+  <script>
+    // Optimize form submission script
+    document.getElementById('bookingForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+  
+        // Form validation logic
+        var form = event.target;
+        var name = form.name.value.trim();
+        var email = form.email.value.trim();
+        var mobile = form.mobile.value.trim();
+        var location = form.location.value.trim();
+        var occupation = form.occupation.value.trim();
+        var checkin = form.checkin.value;
+        var checkout = form.checkout.value;
+        var adults = form.adults.value.trim();
+        var kids = form.kids.value.trim();
+        var rooms = form.rooms.value.trim();
+        var roomType = form.roomType.value;
+        var extraBed = form.extraBed.value;
+        var driverStay = form.driverStay.value;
+        var dog = form.dog.value;
+        var comments = form.comments.value.trim();
+  
+        if (!name || !email || !mobile || !location || !occupation || !checkin || !checkout || !adults || !rooms || !roomType || !extraBed || !driverStay || !dog) {
+            alert('Please fill in all required fields.');
+            return;
+        }
+  
+        if (!validateEmail(email)) {
+            alert('Please enter a valid email address.');
+            return;
+        }
+  
+        if (!validateMobile(mobile)) {
+            alert('Please enter a valid 10-digit mobile number.');
+            return;
+        }
+  
+        // Submit to Web3Forms
+        form.submit();
+  
+        // Create WhatsApp message
+        var whatsappMessage = `Name: ${name}%0AEmail: ${email}%0AMobile: ${mobile}%0AWhere are you from: ${location}%0AWhat work do you do: ${occupation}%0ACheck In: ${checkin}%0ACheck Out: ${checkout}%0AAdults: ${adults}%0AKids: ${kids}%0ANo of rooms: ${rooms}%0AType of rooms: ${roomType}%0ANeed extra bed: ${extraBed}%0ANeed driver's stay: ${driverStay}%0ABringing your dog along: ${dog}%0AComments: ${comments}`;
+  
+        // Redirect to WhatsApp
+        var whatsappUrl = `https://wa.me/919667846787?text=${whatsappMessage}`;
+        window.open(whatsappUrl, '_blank');
+  
+        // Reset form after submission
+        form.reset();
+    });
+  
+    function validateEmail(email) {
+        var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(String(email).toLowerCase());
+    }
+  
+    function validateMobile(mobile) {
+        return /^[0-9]{10}$/.test(mobile);
+    }
+  </script>
 </body>
 </html>
