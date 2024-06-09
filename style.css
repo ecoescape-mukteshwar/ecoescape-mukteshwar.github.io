@@ -11,6 +11,7 @@
 	padding: 0;
 	height: 100%;
 	overflow: hidden;
+  font-display: swap;
   }
   video {
 	width: 100%;
@@ -30,7 +31,7 @@
 	left: 60px;
 	height: 100%;
 	background-color: black;
-	opacity: 0.7;
+	opacity: 0.8;
 	padding: 20px;
 	transition: all 0.3s;
   font-family: Lato;
@@ -55,17 +56,23 @@
 	cursor: pointer;
   }
   #sidebar .components li a {
-	color: #adb5bd;
+	color: #ffffff;
 	text-decoration: none;
 	display: block;
 	transition: all 0.3s;
 	line-height: 2;
   font-family: Lato, sans-serif;
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: 500;
   }
   #sidebar .components li a:hover {
-	color: #ffffff;
+	color: #FFC80B;
   }
+  /* Active Nav Item */
+  .nav-item.active a {
+    color: #FFC80B !important;
+  }
+
   #sidebar .footer {
 	position: absolute;
 	bottom: 30px;
@@ -228,7 +235,7 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-image: url("image/room1(1).jpg");
+	background-image: url("image/room1(1).avif");
 	background-size: cover;
 	background-position: center;
 	opacity: 0;
@@ -262,7 +269,7 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-image: url("image/room2(1).jpg");
+	background-image: url("image/room2(1).avif");
 	background-size: cover;
 	background-position: center;
 	opacity: 0;
@@ -296,7 +303,7 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-image: url("image/room3(1).jpg");
+	background-image: url("image/room3(1).avif");
 	background-size: cover;
 	background-position: center;
 	opacity: 0;
