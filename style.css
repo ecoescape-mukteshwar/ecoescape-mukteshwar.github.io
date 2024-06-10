@@ -340,7 +340,7 @@
   
 
   
-  @-webkit-keyframes scroll {
+  /* @-webkit-keyframes scroll {
     0% {
         transform: translateX(0);
     }
@@ -356,7 +356,7 @@
     100% {
         transform: translateX(calc(-250px * 7));
     }
-}
+} */
 
 .slider {
     background: #f5f5f5; /* Change this to 'transparent' if you want a transparent background */
@@ -517,7 +517,7 @@ width: 200px;
     top: -0 !important;
     left: 0;
     content: " ";
-    background: url(img/testimonial.bg-top.png);
+    /* background: url(image/headerline.png); */
     background-size: 100% 100px;
     width: 100%;
     height: 100px;
