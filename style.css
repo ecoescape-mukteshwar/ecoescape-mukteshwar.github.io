@@ -937,11 +937,16 @@ header .carousel-inner .item {
 	.rooms-container {
 	  grid-template-columns: 1fr;
 	}
-	
 	/* .hero2 {
 	  margin-top: 30px;
 	  padding: 10px;
 	} */
+  }
+
+  @media (max-width: 400px) {
+    .carousel-caption{
+      padding-bottom: 50% !important;
+    }
   }
   
 
@@ -950,6 +955,7 @@ header .carousel-inner .item {
 	.logo-img {
 		width: 20%;
 		height: auto;
+    padding-bottom: 22px;
 	  }
   
 	#sidebar {
@@ -969,7 +975,7 @@ header .carousel-inner .item {
 	  display: block;
 	  position: absolute;
 	  right: 12%;
-	  top: 45px;
+	  top: 65px;
 	}
 	#sidebar .components {
 	  display: none;
