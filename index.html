@@ -13,10 +13,17 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" media="all" onload="this.media='all'">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" defer></script>
   <link rel="preload" as="image" href="img1.avif">
+  <link rel="preload" href="img2.jpg" as="image">
+  <link rel="preload" href="img3.jpg" as="image">
+  <link rel="preload" href="img4.jpg" as="image">
+  <link rel="preload" href="img5.jpg" as="image">
   <link rel="stylesheet" href="style.css">
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) Conversion Tracking --> 
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11455693097">
 </script>
 <script>
@@ -81,7 +88,8 @@
         font-size: 30px;
       }
       .carousel-indicators{
-        margin-left: 30%;
+        margin-left: 1%;
+        left: 30%;
         margin-bottom: 7%;
       }
       .slider{
@@ -138,14 +146,14 @@
   </style>
 </head>
 <body>
-  <div class="navbar-container">
-    <nav id="sidebar" class="img">
+    <div class="navbar-container">
+      <nav id="sidebar" class="img">
         <div class="p-4">
             <h1><a href="index.html" class="logo"><img src="image/LOGO-removebg-preview.avif" alt="Ecoescape Logo" class="logo-img"></a></h1>
             <ul class="list-unstyled components mb-5">
-                <li id="home-nav" class="nav-item"><a href="index.html"> Home</a></li>
+                <li id="home-nav" class="nav-item"><a href="/"> Home</a></li>
                 <li id="about-nav" class="nav-item"><a href="about.html"> About Us</a></li>
-                <li id="rooms-nav" class="nav-item"><a href="rooms.html"> Rooms</a></li>
+                <li id="rooms-nav" class="nav-item"><a href="./rooms"> Rooms</a></li>
                 <li id="gallery-nav" class="nav-item"><a href="gallery.html"> Gallery</a></li>
                 <li id="tariffs-nav" class="nav-item"><a href="tariffs.html"> Tariffs</a></li>
                 <li id="contact-nav" class="nav-item"><a href="contact.html"> Contact Us</a></li>
@@ -160,8 +168,8 @@
               <p><b>📧 ecoescape.mukteshwar@gmail.com</b></p>
             </div>
         </div>
-    </nav>
-</div>
+      </nav>
+    </div>
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {
@@ -207,93 +215,73 @@
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="4"></li>
   </ol>
 
-  <div class="carousel-inner" role="listbox">
+  <!-- Wrapper for slides -->
+<div class="carousel-inner" role="listbox">
     <div class="item active">
-      <div class="banner lazy-load" data-bg="img1.avif"></div>
-      <div class="carousel-caption">
-        <h2>Welcome to <span>Apple Country</span></h2>
-        <h3>Ecoescape Mukteshwar Awaits</h3>
-        <p><a href="#enquirenow">Make an Enquiry</a></p>
-      </div>
+        <div class="banner" style="background-image: url(img1.avif);"></div>
+        <div class="carousel-caption">
+            <h2>Welcome to <span>Apple Country</span></h2>
+            <h3>Ecoescape Mukteshwar Awaits</h3>
+            <p><a href="#enquirenow">Make an Enquiry</a></p>
+        </div>
     </div>
+
     <div class="item">
-      <div class="banner lazy-load" data-bg="img2.jpg"></div>
-      <div class="carousel-caption">
-        <h2>Discover <span>Ecoescape</span></h2>
-        <h3>Where Nature Beckons</h3>
-        <p><a href="#">Learn More About Us</a></p>
-      </div>
+        <div class="banner" style="background-image: url(img2.jpg);"></div>
+        <div class="carousel-caption">
+            <h2>Discover <span>Ecoescape</span></h2>
+            <h3>Where Nature Beckons</h3>
+            <p><a href="#">Learn More About Us</a></p>
+        </div>
     </div>
+
     <div class="item">
-      <div class="banner lazy-load" data-bg="img3.jpg"></div>
-      <div class="carousel-caption">
-        <h2>Experience <span>Comfort</span></h3>
-        <h3>Luxurious Rooms with Stunning Views</h3>
-        <p><a href="#">Explore Our Rooms</a></p>
-      </div>
+        <div class="banner" style="background-image: url(img3.jpg);"></div>
+        <div class="carousel-caption">
+            <h2>Experience <span>Comfort</span></h2>
+            <h3>Luxurious Rooms with Stunning Views</h3>
+            <p><a href="#">Explore Our Rooms</a></p>
+        </div>
     </div>
+
     <div class="item">
-      <div class="banner lazy-load" data-bg="img4.avif"></div>
-      <div class="carousel-caption">
-        <h2>Captivating <span>Views</span></h2>
-        <h3>Explore Our Scenic Surroundings</h3>
-        <p><a href="#">View Our Gallery</a></p>
-      </div>
+        <div class="banner" style="background-image: url(img4.jpg);"></div>
+        <div class="carousel-caption">
+            <h2>Captivating <span>Views</span></h2>
+            <h3>Explore Our Scenic Surroundings</h3>
+            <p><a href="#">View Our Gallery</a></p>
+        </div>
     </div>
+
     <div class="item">
-      <div class="banner lazy-load" data-bg="img5.jpg"></div>
-      <div class="carousel-caption">
-        <h2>Get in <span>Touch</span></h2>
-        <h3>We're Here to Help You</h3>
-        <p><a href="#">Contact us</a></p>
-      </div>
+        <div class="banner" style="background-image: url(img5.jpg);"></div>
+        <div class="carousel-caption">
+            <h2>Get in <span>Touch</span></h2>
+            <h3>We're Here to Help You</h3>
+            <p><a href="#">Contact us</a></p>
+        </div>
     </div>
-  </div>
+</div>
+
+
   <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
+   <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
   </a>
   <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
   </a>
 </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script>
-      $(document).ready(function() {
-        // Initialize carousel
-        $('#carousel-example-generic').carousel();
-
-        // Lazy loading images
-        var lazyImages = document.querySelectorAll(".lazy-load[data-bg]");
-        lazyImages.forEach(function(img) {
-          var observer = new IntersectionObserver(function(entries, observer) {
-            entries.forEach(function(entry) {
-              if (entry.isIntersecting) {
-                var image = new Image();
-                image.src = img.getAttribute("data-bg");
-                image.onload = function() {
-                  img.style.backgroundImage = "url('" + img.getAttribute("data-bg") + "')";
-                };
-                observer.unobserve(img);
-              }
-            });
-          }, { rootMargin: "0px 0px 100px 0px" }); // Adjust root margin as needed
-          observer.observe(img);
-        });
-      });
-    </script>
-</div>
 
 
    <div class="hero2">
