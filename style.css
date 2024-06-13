@@ -235,7 +235,7 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-image: url("image/room1(1).avif");
+	background-image: url("image/room1(1).webp");
 	background-size: cover;
 	background-position: center;
 	opacity: 0;
@@ -269,7 +269,7 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-image: url("image/room2(1).avif");
+	background-image: url("image/room2(1).webp");
 	background-size: cover;
 	background-position: center;
 	opacity: 0;
@@ -303,7 +303,7 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-image: url("image/room3(1).avif");
+	background-image: url("image/room3(1).webp");
 	background-size: cover;
 	background-position: center;
 	opacity: 0;
@@ -362,18 +362,18 @@
 .slider {
     background: #f5f5f5; /* Change this to 'transparent' if you want a transparent background */
     box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
-    height: 100px;
+    height: 140px; /* Increased height to accommodate captions */
     margin: auto;
     overflow: hidden;
     position: relative;
-    width: 960px;
-    margin-left: 480px;
+    width: 1060px;
+    margin-left: 420px;
 }
 
 .slider::before, .slider::after {
     background: linear-gradient(to right, #f5f5f5 0%, rgba(245, 245, 245, 0) 100%); /* Change to match the background */
     content: "";
-    height: 100px;
+    height: 140px; /* Increased height to match slider */
     position: absolute;
     width: 200px;
     z-index: 2;
@@ -398,32 +398,41 @@
 }
 
 .slider .slide {
-    height: 100px;
-    width: 250px;
+    height: 140px; /* Increased height to accommodate captions */
+    width: 160px;
+    text-align: center; /* Center align the text */
 }
-.sliderall{
-background-color: #f5f5f5;
+
+.sliderall {
+    background-color: #f5f5f5;
 }  
 
-.slide img{
-width: 200px;
+.slide img {
+    width: 140px;
 }
   
-  .amenities{
-	background-color: #F5F5F5;
-	display: flex;
-	text-align: center;
-	justify-content: center;
-	padding-top: 1%;
-	padding-bottom: 2%;
-	padding-left: 400px;
-  }
+.amenities {
+    background-color: #F5F5F5;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding-top: 1%;
+    padding-bottom: 2%;
+    padding-left: 400px;
+}
 
-  .amenities h1{
+.amenities h1 {
     font-size: 32px;
     font-family: Lato;
     font-weight: bold;
-  }
+}
+
+figcaption {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
 
   /* Storyboard */
 

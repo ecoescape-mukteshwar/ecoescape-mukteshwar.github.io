@@ -16,11 +16,11 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" defer></script>
-  <link rel="preload" as="image" href="img1.avif">
-  <link rel="preload" href="img2.jpg" as="image">
-  <link rel="preload" href="img3.jpg" as="image">
-  <link rel="preload" href="img4.jpg" as="image">
-  <link rel="preload" href="img5.jpg" as="image">
+  <link rel="preload" as="image" href="img1.webp">
+  <link rel="preload" href="img2.webp" as="image">
+  <link rel="preload" href="img3.webp" as="image">
+  <link rel="preload" href="img4.webp" as="image">
+  <link rel="preload" href="img5.webp" as="image">
   <link rel="stylesheet" href="style.css">
 
   <!-- Google tag (gtag.js) Conversion Tracking --> 
@@ -48,11 +48,10 @@
 
   
 <!-- Google tag (gtag.js) event -->
-<script>
+<!-- <script>
   gtag('event', 'conversion_event_purchase_1', {
-    // <event_parameters>
   });
-</script>
+</script> -->
 
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Ecoescape">
@@ -126,7 +125,10 @@
     @media (max-width: 480px) {
       .slider{
         width: 100%;
-        margin-left: 30px;
+        margin-left: 20px;
+      }
+      .slider::before, .slider::after {
+        background: none;
       }
       .storyboard{
         margin-left: 0%;
@@ -149,14 +151,14 @@
     <div class="navbar-container">
       <nav id="sidebar" class="img">
         <div class="p-4">
-            <h1><a href="index.html" class="logo"><img src="image/LOGO-removebg-preview.avif" alt="Ecoescape Logo" class="logo-img"></a></h1>
+            <h1><a href="index.html" class="logo"><img src="image/LOGO-removebg-preview.webp" alt="Ecoescape Logo" class="logo-img"></a></h1>
             <ul class="list-unstyled components mb-5">
                 <li id="home-nav" class="nav-item"><a href="/"> Home</a></li>
-                <li id="about-nav" class="nav-item"><a href="about.html"> About Us</a></li>
+                <li id="about-nav" class="nav-item"><a href="/"> About Us</a></li>
                 <li id="rooms-nav" class="nav-item"><a href="./rooms"> Rooms</a></li>
-                <li id="gallery-nav" class="nav-item"><a href="gallery.html"> Gallery</a></li>
-                <li id="tariffs-nav" class="nav-item"><a href="tariffs.html"> Tariffs</a></li>
-                <li id="contact-nav" class="nav-item"><a href="contact.html"> Contact Us</a></li>
+                <li id="gallery-nav" class="nav-item"><a href="/"> Gallery</a></li>
+                <li id="tariffs-nav" class="nav-item"><a href="/"> Tariffs</a></li>
+                <li id="contact-nav" class="nav-item"><a href="/"> Contact Us</a></li>
             </ul>
             <div class="menu">
                 <div class="menu-line"></div>
@@ -225,7 +227,7 @@
   <!-- Wrapper for slides -->
 <div class="carousel-inner" role="listbox">
     <div class="item active">
-        <div class="banner" style="background-image: url(img1.avif);"></div>
+        <div class="banner" style="background-image: url(img1.webp);"></div>
         <div class="carousel-caption">
             <h2>Welcome to <span>Apple Country</span></h2>
             <h3>Ecoescape Mukteshwar Awaits</h3>
@@ -234,7 +236,7 @@
     </div>
 
     <div class="item">
-        <div class="banner" style="background-image: url(img2.jpg);"></div>
+        <div class="banner" style="background-image: url(img2.webp);"></div>
         <div class="carousel-caption">
             <h2>Discover <span>Ecoescape</span></h2>
             <h3>Where Nature Beckons</h3>
@@ -243,7 +245,7 @@
     </div>
 
     <div class="item">
-        <div class="banner" style="background-image: url(img3.jpg);"></div>
+        <div class="banner" style="background-image: url(img3.webp);"></div>
         <div class="carousel-caption">
             <h2>Experience <span>Comfort</span></h2>
             <h3>Luxurious Rooms with Stunning Views</h3>
@@ -252,7 +254,7 @@
     </div>
 
     <div class="item">
-        <div class="banner" style="background-image: url(img4.jpg);"></div>
+        <div class="banner" style="background-image: url(img4.webp);"></div>
         <div class="carousel-caption">
             <h2>Captivating <span>Views</span></h2>
             <h3>Explore Our Scenic Surroundings</h3>
@@ -261,7 +263,7 @@
     </div>
 
     <div class="item">
-        <div class="banner" style="background-image: url(img5.jpg);"></div>
+        <div class="banner" style="background-image: url(img5.webp);"></div>
         <div class="carousel-caption">
             <h2>Get in <span>Touch</span></h2>
             <h3>We're Here to Help You</h3>
@@ -291,7 +293,7 @@
     <div class="rooms-container">
       <div class="room">
         <div class="room-container1">
-          <img src="image/room1.avif" alt="Room 1" class="room1">
+          <img src="image/room1.webp" alt="Room 1" class="room1">
         </div>
         <h2>One-Bedroom Villa</h2>
         <p>Experience comfort and tranquility at Ecoescape's One-Bedroom Villa, offering a private entrance, spacious living room, and a separate bedroom with an Extra-Large King size bed. Unwind in the luxurious bathroom featuring a walk-in shower and bath. Enjoy the convenience of a private balcony and access to the common terrace and garden area, while amenities like soundproof walls, a tea/coffee maker, and mountain views ensure a memorable stay.</p>        <button style="background-color: #ecd857; border-radius: 10px; padding: 8px;">Tariff</button>
@@ -299,7 +301,7 @@
       </div>
       <div class="room">
         <div class="room-container2">
-          <img src="image/room2.avif" alt="Room 2" class="room2">
+          <img src="image/room2.webp" alt="Room 2" class="room2">
         </div>
         <h2>Two Bedroom Holiday Home</h2>
         <p>Experience the ultimate getaway at Ecoescape's Two-Bedroom Holiday Home, offering a private entrance, a cozy living room, and two separate bedrooms including an Extra-Large King size bed and a Double Bed. Refresh in the luxurious bathroom with a walk-in shower and bath. Enjoy complimentary WiFi and toiletries, as well as mountain views from every room. Witness stunning sunrise panoramas from your private balcony, and relax in the common large terrace and picturesque garden featuring over 100 plant varieties. With amenities like soundproof walls, a tea/coffee maker, and comfortable seating, this holiday home guarantees a relaxing escape.</p>        <button style="background-color: #ecd857; border-radius: 10px; padding: 8px;">Tariff</button>
@@ -307,7 +309,7 @@
       </div>
       <div class="room">
         <div class="room-container3">
-          <img src="image/room3.avif" alt="Room 3" class="room3">
+          <img src="image/room3.webp" alt="Room 3" class="room3">
         </div>
         <h2>Perfect 2BR for Families (Mtn View, Wifi, Parking & Terrace)</h2>
         <p>Elevate your stay with Ecoescape's Apartment with Mountain View, offering a spacious layout of approximately 100 sq gaj. Unwind in the comfortable living room, dine in the cozy dining area, and retreat to two bedrooms featuring extra-large king size beds. Step onto the verandah surrounded by lush plants and flowers, and refresh in the two bathrooms equipped with walk-in showers and complimentary toiletries. Enjoy the privacy of a private entrance, the tranquility of soundproof walls, and the convenience of a tea/coffee maker. Delight in garden views from the terrace, and soak in the stunning mountain and sunrise vistas from bay windows. Stay connected with complimentary WiFi, park with ease on the premises, and explore the common terrace and garden area boasting over 100 plant varieties for an unforgettable experience.</p>        <button style="background-color: #ecd857; border-radius: 10px; padding: 8px;">Tariff</button>
@@ -318,61 +320,109 @@
 
   <div class="amenities">
     <h1>Amenities</h1>
-  </div>
-  <div class="sliderall"> 
+</div>
+<div class="sliderall"> 
     <div class="slider">
-      <div class="slide-track">
-        <div class="slide">
-          <img src="amenitiesimages\wifi.avif" height="100" width="250" alt="" />
+        <div class="slide-track">
+            <div class="slide">
+                <figure>
+                    <img src="amenitiesimages/wifi.webp" height="100" width="250" alt="WiFi" />
+                    <figcaption>WiFi</figcaption>
+                </figure>
+            </div>
+            <div class="slide">
+                <figure>
+                    <img src="amenitiesimages/terrace.webp" height="100" width="250" alt="Terrace" />
+                    <figcaption>Terrace</figcaption>
+                </figure>
+            </div>
+            <div class="slide">
+                <figure>
+                    <img src="amenitiesimages/garden.webp" height="100" width="250" alt="Garden" />
+                    <figcaption>Garden</figcaption>
+                </figure>
+            </div>
+            <div class="slide">
+                <figure>
+                    <img src="amenitiesimages/restaurant.webp" height="100" width="250" alt="Restaurant" />
+                    <figcaption>Restaurant</figcaption>
+                </figure>
+            </div>
+            <div class="slide">
+                <figure>
+                    <img src="amenitiesimages/roomservice.webp" height="100" width="250" alt="Room Service" />
+                    <figcaption>Room Service</figcaption>
+                </figure>
+            </div>
+            <div class="slide">
+                <figure>
+                    <img src="amenitiesimages/kettle.webp" height="100" width="250" alt="Kettle" />
+                    <figcaption>Kettle</figcaption>
+                </figure>
+            </div>
+            <div class="slide">
+                <figure>
+                    <img src="amenitiesimages/toiletries.webp" height="100" width="250" alt="Toiletries" />
+                    <figcaption>Toiletries</figcaption>
+                </figure>
+            </div>
+            <div class="slide">
+                <figure>
+                    <img src="amenitiesimages/parking.webp" height="100" width="250" alt="Parking" />
+                    <figcaption>Parking</figcaption>
+                </figure>
+            </div>
+            <div class="slide">
+                <figure>
+                    <img src="amenitiesimages/taxi.webp" height="100" width="250" alt="Taxi" />
+                    <figcaption>Taxi</figcaption>
+                </figure>
+            </div>
+            <div class="slide">
+                <figure>
+                    <img src="amenitiesimages/wifi.webp" height="100" width="250" alt="WiFi" />
+                    <figcaption>WiFi</figcaption>
+                </figure>
+            </div>
+            <div class="slide">
+                <figure>
+                    <img src="amenitiesimages/terrace.webp" height="100" width="250" alt="Terrace" />
+                    <figcaption>Terrace</figcaption>
+                </figure>
+            </div>
+            <div class="slide">
+                <figure>
+                    <img src="amenitiesimages/garden.webp" height="100" width="250" alt="Garden" />
+                    <figcaption>Garden</figcaption>
+                </figure>
+            </div>
+            <div class="slide">
+                <figure>
+                    <img src="amenitiesimages/restaurant.webp" height="100" width="250" alt="Restaurant" />
+                    <figcaption>Restaurant</figcaption>
+                </figure>
+            </div>
+            <div class="slide">
+                <figure>
+                    <img src="amenitiesimages/roomservice.webp" height="100" width="250" alt="Room Service" />
+                    <figcaption>Room Service</figcaption>
+                </figure>
+            </div>
+            <div class="slide">
+                <figure>
+                    <img src="amenitiesimages/kettle.webp" height="100" width="250" alt="Kettle" />
+                    <figcaption>Kettle</figcaption>
+                </figure>
+            </div>
+            <div class="slide">
+                <figure>
+                    <img src="amenitiesimages/toiletries.webp" height="100" width="250" alt="Toiletries" />
+                    <figcaption>Toiletries</figcaption>
+                </figure>
+            </div>
         </div>
-        <div class="slide">
-          <img src="amenitiesimages\terrace.avif" height="100" width="250" alt="" />
-        </div>
-        <div class="slide">
-          <img src="amenitiesimages\garden.avif" height="100" width="250" alt="" />
-        </div>
-        <div class="slide">
-          <img src="amenitiesimages\restaurant.avif" height="100" width="250" alt="" />
-        </div>
-        <div class="slide">
-          <img src="amenitiesimages\roomservice.avif" height="100" width="250" alt="" />
-        </div>
-        <div class="slide">
-          <img src="amenitiesimages\kettle.avif" height="100" width="250" alt="" />
-        </div>
-        <div class="slide">
-          <img src="amenitiesimages\toiletries.avif" height="100" width="250" alt="" />
-        </div>
-        <div class="slide">
-          <img src="amenitiesimages\parking.avif" height="100" width="250" alt="" />
-        </div>
-        <div class="slide">
-          <img src="amenitiesimages\taxi.avif" height="100" width="250" alt="" />
-        </div>
-        <div class="slide">
-          <img src="amenitiesimages\wifi.avif" height="100" width="250" alt="" />
-        </div>
-        <div class="slide">
-          <img src="amenitiesimages\terrace.avif" height="100" width="250" alt="" />
-        </div>
-        <div class="slide">
-          <img src="amenitiesimages\garden.avif" height="100" width="250" alt="" />
-        </div>
-        <div class="slide">
-          <img src="amenitiesimages\restaurant.avif" height="100" width="250" alt="" />
-        </div>
-        <div class="slide">
-          <img src="amenitiesimages\roomservice.avif" height="100" width="250" alt="" />
-        </div>
-        <div class="slide">
-          <img src="amenitiesimages\kettle.avif" height="100" width="250" alt="" />
-        </div>
-        <div class="slide">
-          <img src="amenitiesimages\toiletries.avif" height="100" width="250" alt="" />
-        </div>
-      </div>
     </div>
-  </div>
+</div>
 
   <div class="storycontainer">
     <div class="storyboard">
@@ -397,7 +447,7 @@
             <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active">
                     <div class="testimonial4_slide">
-                        <img src="image/vishalsahu.avif" class="img-circle img-responsive" />
+                        <img src="image/vishalsahu.webp" class="img-circle img-responsive" />
                         <h4>Beautiful Location</h4>
                         <p data-full-text="I am from Delhi, and it is super hot here in May. We visited Mukteshwar for 3 nights and chose Ecoescape Mukteshwar for its apartment-style accommodation, which allowed my family to stay closely together. We had 2 bedrooms with attached bathrooms, a living area, dining area, balcony, and a beautiful terrace full of roses. The host guided us on sightseeing spots and arranged cabs throughout our stay. The property is centrally located, close to Maha Dev Temple and a waterfall. We enjoyed a memorable stay, especially the stunning sunrise views from the property. The host offers long stays with a kitchen after July, and we plan to return for a longer stay as I work from home.">
                             I am from Delhi, and it is super hot here in May. We visited Mukteshwar for 3 nights and chose Ecoescape Mukteshwar for its apartment-style accommodation, which allowed my family to stay closely together. We had 2 bedrooms... <span class="read-more">Read more</span>
@@ -407,7 +457,7 @@
                 </div>
                 <div class="carousel-item">
                     <div class="testimonial4_slide">
-                        <img src="image/shradha.avif" class="img-circle img-responsive" />
+                        <img src="image/shradha.webp" class="img-circle img-responsive" />
                         <h4>Very Comfortable Stay</h4>
                         <p data-full-text="The place is excellent and the food is very homely. Very neat and clean washrooms and bedrooms were cozy and very comfortable. The host was very helpful and the caretaker was polite. They have maintained the place very well. I would highly recommend this place if you love nature and want to spend some quality time with friends and family.">
                             The place is excellent and the food is very homely. Very neat and clean washrooms and bedrooms were cozy and very comfortable. The host was very helpful and the caretaker was polite. They have maintained the place very well... <span class="read-more">Read more</span>
@@ -417,7 +467,7 @@
                 </div>
                 <div class="carousel-item">
                     <div class="testimonial4_slide">
-                        <img src="image/nadeemkhan.avif" class="img-circle img-responsive" />
+                        <img src="image/nadeemkhan.webp" class="img-circle img-responsive" />
                         <h4>Loved this place</h4>
                         <p data-full-text="My partner and I stayed at Ecoescape and loved it. The place is new and has modern, clean rooms with all the facilities we needed. We got a great deal by booking over the phone, which gave us a whole apartment with a balcony, terrace access, and a lovely garden. Finding the place was easy, and we enjoyed stunning sunrise views. The food was fresh and made to order, just like home cooking. Everything was clean and tidy, and we felt comfortable throughout our stay. Some highlights were the pleasant weather, fast WiFi, and the overall value for money. We'll definitely be coming back because the hospitality was fantastic.">
                             My partner and I stayed at Ecoescape and loved it. The place is new and has modern, clean rooms with all the facilities we needed. We got a great deal by booking over the phone, which gave us a whole apartment with a balcony, terrace access,... <span class="read-more">Read more</span>
@@ -427,7 +477,7 @@
                 </div>
                 <div class="carousel-item">
                     <div class="testimonial4_slide">
-                        <img src="image/vanaja.avif" class="img-circle img-responsive" />
+                        <img src="image/vanaja.webp" class="img-circle img-responsive" />
                         <h4>A simple home stay.</h4>
                         <p data-full-text="The rooms are well maintained with piping hot water which is a must in hills ratio, and linens are changed everyday and the house has ample space. Beautiful sunrise from the room is extra bonus. Simple home stay with simple food is always a good choice when one travel. We visited Mukteshwar temple, Baalu Garh falls trekking is really worth. Excellent arrangements. We also visited Dol ashram, Nageshwar temple where we stood awestruck at the wonders India has. What a beauty way back from 6th century. One can really spend a day. Beautiful stream going along the deodar forest and a cluster of small, big temples in a complex, and the museum is worth for life time.">
                             The rooms are well maintained with piping hot water which is a must in hills ratio, and linens are changed everyday and the house has ample space. Beautiful sunrise from the room is extra bonus. Simple home stay with simple food is always a ... <span class="read-more">Read more</span>
@@ -437,7 +487,7 @@
                 </div>
                 <div class="carousel-item">
                     <div class="testimonial4_slide">
-                        <img src="image/jatendar.avif" class="img-circle img-responsive" />
+                        <img src="image/jatendar.webp" class="img-circle img-responsive" />
                         <h4>Great experience</h4>
                         <p data-full-text="Excellent experience for my vist. We had nice homemade food and excellent hospitality by the caretaker DIWAN. Great veiw of Valley and morning Sunrise 🌅. In night sky was very clear I have never seen so many stars in my life living in a City. Wow I will visit again soon.">
                             Excellent experience for my visit. We had nice homemade food and excellent hospitality by the caretaker DIWAN. Great view of Valley and morning Sunrise 🌅. In night sky was very clear I have never seen so many stars in my life living in a City... <span class="read-more">Read more</span>
@@ -569,6 +619,79 @@
     </form>
   </div>
 </section>
+
+<script>
+  (function() {
+      document.getElementById('bookingForm').addEventListener('submit', function(event) {
+          event.preventDefault();
+
+          var form = event.target;
+
+          var formData = new FormData(form);
+
+          var requiredFields = ['name', 'email', 'mobile', 'location', 'occupation', 'checkin', 'checkout', 'adults', 'rooms', 'roomType', 'extraBed', 'driverStay', 'dog'];
+          var missingFields = requiredFields.filter(function(field) {
+              return !formData.get(field);
+          });
+
+          if (missingFields.length) {
+              alert('Please fill in all required fields.');
+              return;
+          }
+
+          if (!validateEmail(formData.get('email'))) {
+              alert('Please enter a valid email address.');
+              return;
+          }
+
+          if (!validateMobile(formData.get('mobile'))) {
+              alert('Please enter a valid 10-digit mobile number.');
+              return;
+          }
+
+          // Trigger Google Analytics event
+          gtag('event', 'conversion_event_purchase_1', {
+              'event_callback': function() {
+                  // Use fetch to submit the form data to Web3Forms
+                  fetch(form.action, {
+                      method: 'POST',
+                      body: formData,
+                      headers: {
+                          'Accept': 'application/json'
+                      }
+                  }).then(function(response) {
+                      if (response.ok) {
+                          alert('Form submitted successfully.');
+                          form.reset();
+                      } else {
+                          alert('Form submission failed.');
+                      }
+                  }).catch(function(error) {
+                      alert('Form submission error.');
+                  });
+              },
+              'event_timeout': 2000
+          });
+
+          // Generate WhatsApp message
+          var whatsappMessage = `Name: ${formData.get('name')}%0AEmail: ${formData.get('email')}%0AMobile: ${formData.get('mobile')}%0AWhere are you from: ${formData.get('location')}%0AWhat work do you do: ${formData.get('occupation')}%0ACheck In: ${formData.get('checkin')}%0ACheck Out: ${formData.get('checkout')}%0AAdults: ${formData.get('adults')}%0AKids: ${formData.get('kids')}%0ANo of rooms: ${formData.get('rooms')}%0AType of rooms: ${formData.get('roomType')}%0ANeed extra bed: ${formData.get('extraBed')}%0ANeed driver's stay: ${formData.get('driverStay')}%0ABringing your dog along: ${formData.get('dog')}%0AComments: ${formData.get('comments')}`;
+
+          var whatsappUrl = `https://wa.me/919667846787?text=${whatsappMessage}`;
+          window.open(whatsappUrl, '_blank');
+      });
+
+      function validateEmail(email) {
+          var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          return re.test(String(email).toLowerCase());
+      }
+
+      function validateMobile(mobile) {
+          return /^[0-9]{10}$/.test(mobile);
+      }
+  })();
+</script>
+
+
   
   <script>
     // Lazy load the web3forms script asynchronously
@@ -627,7 +750,7 @@
 </script>
 
   
-<script>
+<!-- <script>
   (function() {
       document.getElementById('bookingForm').addEventListener('submit', function(event) {
           event.preventDefault();
@@ -664,6 +787,10 @@
               return;
           }
   
+          gtag('event', 'conversion_event_purchase_1', {
+            'send_to': 'AW-11455693097/xxxxxx'
+          });
+  
           form.submit();
   
           var whatsappMessage = `Name: ${name}%0AEmail: ${email}%0AMobile: ${mobile}%0AWhere are you from: ${location}%0AWhat work do you do: ${occupation}%0ACheck In: ${checkin}%0ACheck Out: ${checkout}%0AAdults: ${adults}%0AKids: ${kids}%0ANo of rooms: ${rooms}%0AType of rooms: ${roomType}%0ANeed extra bed: ${extraBed}%0ANeed driver's stay: ${driverStay}%0ABringing your dog along: ${dog}%0AComments: ${comments}`;
@@ -683,6 +810,7 @@
           return /^[0-9]{10}$/.test(mobile);
       }
   })();
-</script>
+</script> -->
+
 </body>
 </html>
