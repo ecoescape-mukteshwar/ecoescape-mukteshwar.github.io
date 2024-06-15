@@ -67,54 +67,47 @@
 <body>
     <div class="navbar-container">
         <nav id="sidebar" class="img">
-            <div class="p-4">
-                <h1><a href="index.html" class="logo"><img src="image/LOGO-removebg-preview.avif" alt="Ecoescape Logo" class="logo-img"></a></h1>
-                <ul class="list-unstyled components mb-5">
-                    <li id="home-nav" class="nav-item"><a href="/"> Home</a></li>
-                    <li id="about-nav" class="nav-item"><a href="/"> About Us</a></li>
-                    <li id="rooms-nav" class="nav-item"><a href="./rooms"> Rooms</a></li>
-                    <li id="gallery-nav" class="nav-item"><a href="/"> Gallery</a></li>
-                    <li id="tariffs-nav" class="nav-item"><a href="/"> Tariffs</a></li>
-                    <li id="contact-nav" class="nav-item"><a href="/"> Contact Us</a></li>
-                </ul>
-                <div class="menu">
-                    <div class="menu-line"></div>
-                    <div class="menu-line"></div>
-                    <div class="menu-line"></div>
-                </div>
-                <div class="footer">
-                    <p>📞 +91 9667846787</p>
-                    <p>📧 ecoescape.mukteshwar@gmail.com</p>
-                </div>
-            </div>
+          <div class="p-4">
+              <h1><a href="index.html" class="logo"><img src="image/LOGO-removebg-preview.webp" alt="Ecoescape Logo" class="logo-img"></a></h1>
+              <ul class="list-unstyled components mb-5">
+                  <li id="home-nav" class="nav-item"><a href="/"> Home</a></li>
+                  <li id="about-nav" class="nav-item"><a href="/"> About Us</a></li>
+                  <li id="rooms-nav" class="nav-item"><a href="./rooms"> Rooms</a></li>
+                  <li id="gallery-nav" class="nav-item"><a href="/"> Gallery</a></li>
+                  <li id="tariffs-nav" class="nav-item"><a href="/"> Tariffs</a></li>
+                  <li id="contact-nav" class="nav-item"><a href="/"> Contact Us</a></li>
+              </ul>
+              <div class="menu">
+                  <div class="menu-line"></div>
+                  <div class="menu-line"></div>
+                  <div class="menu-line"></div>
+              </div>
+              <div class="footer">
+                <p><b>📞 +91 9667846787</b></p>
+                <p><b>📧 ecoescape.mukteshwar@gmail.com</b></p>
+              </div>
+          </div>
         </nav>
-    </div>
-    
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-          // Get the current URL path
-          var path = window.location.pathname;
-      
-          // Map paths to corresponding navbar item IDs
-          var navItems = {
-              "/": "home-nav",
-              "/index.html": "home-nav",
-              "/about.html": "about-nav",
-              "/rooms.html": "rooms-nav",
-              "/gallery.html": "gallery-nav",
-              "/tariffs.html": "tariffs-nav",
-              "/contact.html": "contact-nav"
-          };
-      
-          // Get the ID of the navbar item to activate
-          var activeNavId = navItems[path];
-      
-          // Add the 'active' class to the corresponding navbar item
-          if (activeNavId) {
-              document.getElementById(activeNavId).classList.add("active");
-          }
-      });
-      </script>
+      </div>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const path = window.location.pathname.replace(/\.html$/, "") || "/";
+      const navItems = {
+          "/": "home-nav",
+          "/about": "about-nav",
+          "/rooms": "rooms-nav",
+          "/gallery": "gallery-nav",
+          "/tariffs": "tariffs-nav",
+          "/contact": "contact-nav"
+      };
+      const activeNavId = navItems[path];
+      if (activeNavId) {
+          document.getElementById(activeNavId).classList.add("active");
+      }
+    });
+  </script>
+  
     <div class="icon-bar">
         <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
         <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
@@ -130,15 +123,15 @@
         </div>
         <div class="d-flex justify-content-center flex-wrap">
             <div class="room-button" data-target="#carouselExampleIndicators" data-slide-to="0">
-                <img src="image/room1.avif" alt="Room 1">
+                <img src="image/room1.webp" alt="Room 1">
                 <span>One-Bedroom Villa</span>
             </div>
             <div class="room-button" data-target="#carouselExampleIndicators" data-slide-to="1">
-                <img src="image/room2.avif" alt="Room 2">
+                <img src="image/room2.webp" alt="Room 2">
                 <span>Two Bedroom Villa</span>
             </div>
             <div class="room-button" data-target="#carouselExampleIndicators" data-slide-to="2">
-                <img src="image/room3.avif" alt="Room 3">
+                <img src="image/room3.webp" alt="Room 3">
                 <span>Mountainview Apartment</span>
             </div>
         </div>
@@ -148,7 +141,7 @@
                 <div class="carousel-item active">
                     <div class="row">
                         <div class="col-md-6">
-                            <img src="image/room1.avif" class="d-block w-100" alt="Room 1">
+                            <img src="image/room1.webp" class="d-block w-100" alt="Room 1">
                         </div>
                         <div class="col-md-6 d-flex flex-column justify-content-center">
                             <h3>One-Bedroom Villa</h3>
@@ -167,7 +160,7 @@
                 <div class="carousel-item">
                     <div class="row">
                         <div class="col-md-6">
-                            <img src="image/room2.avif" class="d-block w-100" alt="Room 2">
+                            <img src="image/room2.webp" class="d-block w-100" alt="Room 2">
                         </div>
                         <div class="col-md-6 d-flex flex-column justify-content-center">
                             <h3>Two Bedroom Villa</h3>
@@ -186,7 +179,7 @@
                 <div class="carousel-item">
                     <div class="row">
                         <div class="col-md-6">
-                            <img src="image/room3.avif" class="d-block w-100" alt="Room 3">
+                            <img src="image/room3.webp" class="d-block w-100" alt="Room 3">
                         </div>
                         <div class="col-md-6 d-flex flex-column justify-content-center">
                             <h3>Mountainview Apartment</h3>
