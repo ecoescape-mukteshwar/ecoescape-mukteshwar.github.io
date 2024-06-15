@@ -175,33 +175,19 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {
-      // Get the current URL path
-      var path = window.location.pathname;
-  
-      // Normalize path for simpler matching
-      if (path === "/" || path === "/index.html") {
-          path = "/";
-      } else {
-          path = path.replace(/\.html$/, "");
-      }
-  
-      // Map paths to corresponding navbar item IDs
-      var navItems = {
-          "/": "home-nav",
-          "/about": "about-nav",
-          "/rooms": "rooms-nav",
-          "/gallery": "gallery-nav",
-          "/tariffs": "tariffs-nav",
-          "/contact": "contact-nav"
-      };
-  
-      // Get the ID of the navbar item to activate
-      var activeNavId = navItems[path];
-  
-      // Add the 'active' class to the corresponding navbar item
-      if (activeNavId) {
-          document.getElementById(activeNavId).classList.add("active");
-      }
+    const path = window.location.pathname.replace(/\.html$/, "") || "/";
+    const navItems = {
+        "/": "home-nav",
+        "/about": "about-nav",
+        "/rooms": "rooms-nav",
+        "/gallery": "gallery-nav",
+        "/tariffs": "tariffs-nav",
+        "/contact": "contact-nav"
+    };
+    const activeNavId = navItems[path];
+    if (activeNavId) {
+        document.getElementById(activeNavId).classList.add("active");
+    }
   });
 </script>
 
@@ -227,7 +213,7 @@
   <!-- Wrapper for slides -->
 <div class="carousel-inner" role="listbox">
     <div class="item active">
-        <div class="banner" style="background-image: url(img1.webp);"></div>
+        <div class="banner" style="background-image: url('https://i.postimg.cc/gjnjXPxs/img1.webp');"></div>
         <div class="carousel-caption">
             <h2>Welcome to <span>Apple Country</span></h2>
             <h3>Ecoescape Mukteshwar Awaits</h3>
@@ -236,7 +222,7 @@
     </div>
 
     <div class="item">
-        <div class="banner" style="background-image: url(img2.webp);"></div>
+        <div class="banner" style="background-image: url('https://i.postimg.cc/L4bndhWb/img2.webp');"></div>
         <div class="carousel-caption">
             <h2>Discover <span>Ecoescape</span></h2>
             <h3>Where Nature Beckons</h3>
@@ -245,7 +231,7 @@
     </div>
 
     <div class="item">
-        <div class="banner" style="background-image: url(img3.webp);"></div>
+        <div class="banner" style="background-image: url('https://i.postimg.cc/PrvNdTsr/img3.webp');"></div>
         <div class="carousel-caption">
             <h2>Experience <span>Comfort</span></h2>
             <h3>Luxurious Rooms with Stunning Views</h3>
@@ -254,7 +240,7 @@
     </div>
 
     <div class="item">
-        <div class="banner" style="background-image: url(img4.webp);"></div>
+        <div class="banner" style="background-image: url('https://i.postimg.cc/vZRTBkb7/img4.webp');"></div>
         <div class="carousel-caption">
             <h2>Captivating <span>Views</span></h2>
             <h3>Explore Our Scenic Surroundings</h3>
@@ -263,7 +249,7 @@
     </div>
 
     <div class="item">
-        <div class="banner" style="background-image: url(img5.webp);"></div>
+        <div class="banner" style="background-image: url('https://i.postimg.cc/MHNT1rRS/img5.webp');"></div>
         <div class="carousel-caption">
             <h2>Get in <span>Touch</span></h2>
             <h3>We're Here to Help You</h3>
@@ -286,143 +272,173 @@
 
 
 
-   <div class="hero2">
-    <h1>Rooms</h1>
-    <p>Explore our cozy rooms with breathtaking views.</p>
-    <br>
-    <div class="rooms-container">
+<div class="hero2">
+  <h1>Rooms</h1>
+  <p>Explore our cozy rooms with breathtaking views.</p>
+  <br>
+  <div class="rooms-container">
       <div class="room">
-        <div class="room-container1">
-          <img src="image/room1.webp" alt="Room 1" class="room1">
-        </div>
-        <h2>One-Bedroom Villa</h2>
-        <p>Experience comfort and tranquility at Ecoescape's One-Bedroom Villa, offering a private entrance, spacious living room, and a separate bedroom with an Extra-Large King size bed. Unwind in the luxurious bathroom featuring a walk-in shower and bath. Enjoy the convenience of a private balcony and access to the common terrace and garden area, while amenities like soundproof walls, a tea/coffee maker, and mountain views ensure a memorable stay.</p>        <button style="background-color: #ecd857; border-radius: 10px; padding: 8px;">Tariff</button>
-        <button style="background-color: #ecd857; border-radius: 10px; padding: 8px;">Gallery</button>
+          <div class="room-container1">
+              <img src="image/room1.webp" alt="Room 1" class="room1">
+          </div>
+          <h2>One-Bedroom Villa</h2>
+          <p class="room-description" data-full-text="Experience comfort and tranquility at Ecoescape's One-Bedroom Villa, offering a private entrance, spacious living room, and a separate bedroom with an Extra-Large King size bed. Unwind in the luxurious bathroom featuring a walk-in shower and bath. Enjoy the convenience of a private balcony and access to the common terrace and garden area, while amenities like soundproof walls, a tea/coffee maker, and mountain views ensure a memorable stay.">Experience comfort and tranquility at Ecoescape's One-Bedroom Villa, offering a private entrance, spacious living room, and a separate bedroom with an Extra-Large King size bed. . Unwind in the luxurious bathroom... <span class="read-more">Read more</span></p>
+          <button style="background-color: #ecd857; border-radius: 10px; padding: 8px;">Tariff</button>
+          <button style="background-color: #ecd857; border-radius: 10px; padding: 8px;">Gallery</button>
       </div>
       <div class="room">
-        <div class="room-container2">
-          <img src="image/room2.webp" alt="Room 2" class="room2">
-        </div>
-        <h2>Two Bedroom Holiday Home</h2>
-        <p>Experience the ultimate getaway at Ecoescape's Two-Bedroom Holiday Home, offering a private entrance, a cozy living room, and two separate bedrooms including an Extra-Large King size bed and a Double Bed. Refresh in the luxurious bathroom with a walk-in shower and bath. Enjoy complimentary WiFi and toiletries, as well as mountain views from every room. Witness stunning sunrise panoramas from your private balcony, and relax in the common large terrace and picturesque garden featuring over 100 plant varieties. With amenities like soundproof walls, a tea/coffee maker, and comfortable seating, this holiday home guarantees a relaxing escape.</p>        <button style="background-color: #ecd857; border-radius: 10px; padding: 8px;">Tariff</button>
-        <button style="background-color: #ecd857; border-radius: 10px; padding: 8px;">Gallery</button>
+          <div class="room-container2">
+              <img src="image/room2.webp" alt="Room 2" class="room2">
+          </div>
+          <h2>Two Bedroom Holiday Home</h2>
+          <p class="room-description" data-full-text="Experience the ultimate getaway at Ecoescape's Two-Bedroom Holiday Home, offering a private entrance, a cozy living room, and two separate bedrooms including an Extra-Large King size bed and a Double Bed. Refresh in the luxurious bathroom with a walk-in shower and bath. Enjoy complimentary WiFi and toiletries, as well as mountain views from every room. Witness stunning sunrise panoramas from your private balcony, and relax in the common large terrace and picturesque garden featuring over 100 plant varieties. With amenities like soundproof walls, a tea/coffee maker, and comfortable seating, this holiday home guarantees a relaxing escape.">Experience the ultimate getaway at Ecoescape's Two-Bedroom Holiday Home, offering a private entrance, a cozy living room, and two separate bedrooms including an Extra-Large... <span class="read-more">Read more</span></p>
+          <button style="background-color: #ecd857; border-radius: 10px; padding: 8px;">Tariff</button>
+          <button style="background-color: #ecd857; border-radius: 10px; padding: 8px;">Gallery</button>
       </div>
       <div class="room">
-        <div class="room-container3">
-          <img src="image/room3.webp" alt="Room 3" class="room3">
-        </div>
-        <h2>Perfect 2BR for Families (Mtn View, Wifi, Parking & Terrace)</h2>
-        <p>Elevate your stay with Ecoescape's Apartment with Mountain View, offering a spacious layout of approximately 100 sq gaj. Unwind in the comfortable living room, dine in the cozy dining area, and retreat to two bedrooms featuring extra-large king size beds. Step onto the verandah surrounded by lush plants and flowers, and refresh in the two bathrooms equipped with walk-in showers and complimentary toiletries. Enjoy the privacy of a private entrance, the tranquility of soundproof walls, and the convenience of a tea/coffee maker. Delight in garden views from the terrace, and soak in the stunning mountain and sunrise vistas from bay windows. Stay connected with complimentary WiFi, park with ease on the premises, and explore the common terrace and garden area boasting over 100 plant varieties for an unforgettable experience.</p>        <button style="background-color: #ecd857; border-radius: 10px; padding: 8px;">Tariff</button>
-        <button style="background-color: #ecd857; border-radius: 10px; padding: 8px;">Gallery</button>
+          <div class="room-container3">
+              <img src="image/room3.webp" alt="Room 3" class="room3">
+          </div>
+          <h2>Perfect 2BR for Families (Mtn View, Wifi, Parking & Terrace)</h2>
+          <p class="room-description" data-full-text="Elevate your stay with Ecoescape's Apartment with Mountain View, offering a spacious layout of approximately 100 sq gaj. Unwind in the comfortable living room, dine in the cozy dining area, and retreat to two bedrooms featuring extra-large king size beds. Step onto the verandah surrounded by lush plants and flowers, and refresh in the two bathrooms equipped with walk-in showers and complimentary toiletries. Enjoy the privacy of a private entrance, the tranquility of soundproof walls, and the convenience of a tea/coffee maker. Delight in garden views from the terrace, and soak in the stunning mountain and sunrise vistas from bay windows. Stay connected with complimentary WiFi, park with ease on the premises, and explore the common terrace and garden area boasting over 100 plant varieties for an unforgettable experience.">Elevate your stay with Ecoescape's Apartment with Mountain View, offering a spacious layout of approximately 100 sq gaj... <span class="read-more">Read more</span></p>
+          <button style="background-color: #ecd857; border-radius: 10px; padding: 8px;">Tariff</button>
+          <button style="background-color: #ecd857; border-radius: 10px; padding: 8px;">Gallery</button>
       </div>
-    </div>
   </div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var readMoreTexts = document.querySelectorAll('.room-description[data-full-text]');
+    
+    readMoreTexts.forEach(function(element) {
+        var fullText = element.getAttribute('data-full-text');
+        var truncatedText = element.textContent.split('...')[0] + '... <span class="read-more">Read more</span>';
+
+        element.innerHTML = truncatedText;
+
+        element.addEventListener('click', function(e) {
+            var readMoreSpan = e.target.closest('.read-more');
+            if (readMoreSpan) {
+                if (element.classList.contains('expanded')) {
+                    element.innerHTML = truncatedText;
+                    element.classList.remove('expanded');
+                } else {
+                    element.innerHTML = fullText + ' <span class="read-more">Read less</span>';
+                    element.classList.add('expanded');
+                }
+                e.stopPropagation();
+            }
+        });
+    });
+});
+
+</script>
 
   <div class="amenities">
-    <h1>Amenities</h1>
-</div>
-<div class="sliderall"> 
-    <div class="slider">
-        <div class="slide-track">
-            <div class="slide">
+      <h1>Amenities</h1>
+  </div>
+  <div class="sliderall"> 
+      <div class="slider">
+          <div class="slide-track">
+              <div class="slide">
+                  <figure>
+                      <img src="https://i.postimg.cc/HsNZ70h9/wifi.webp" height="100" width="250" alt="WiFi" />
+                      <figcaption>WiFi</figcaption>
+                  </figure>
+              </div>
+              <div class="slide">
+                  <figure>
+                      <img src="https://i.postimg.cc/R05ggS93/terrace.webp" height="100" width="250" alt="Terrace" />
+                      <figcaption>Terrace</figcaption>
+                  </figure>
+              </div>
+              <div class="slide">
+                  <figure>
+                      <img src="https://i.postimg.cc/50Jk2xRc/garden.webp" height="100" width="250" alt="Garden" />
+                      <figcaption>Garden</figcaption>
+                  </figure>
+              </div>
+              <div class="slide">
+                  <figure>
+                      <img src="https://i.postimg.cc/zD0PqYwM/restaurant.webp" height="100" width="250" alt="Restaurant" />
+                      <figcaption>Restaurant</figcaption>
+                  </figure>
+              </div>
+              <div class="slide">
+                  <figure>
+                      <img src="https://i.postimg.cc/brC6g1N8/roomservice.webp" height="100" width="250" alt="Room Service" />
+                      <figcaption>Room Service</figcaption>
+                  </figure>
+              </div>
+              <div class="slide">
+                  <figure>
+                      <img src="https://i.postimg.cc/qRGDt9PN/kettle.webp" height="100" width="250" alt="Kettle" />
+                      <figcaption>Kettle</figcaption>
+                  </figure>
+              </div>
+              <div class="slide">
+                  <figure>
+                      <img src="https://i.postimg.cc/NjrN89hq/toiletries.webp" height="100" width="250" alt="Toiletries" />
+                      <figcaption>Toiletries</figcaption>
+                  </figure>
+              </div>
+              <div class="slide">
+                  <figure>
+                      <img src="https://i.postimg.cc/qqMb21rj/parking.webp" height="100" width="250" alt="Parking" />
+                      <figcaption>Parking</figcaption>
+                  </figure>
+              </div>
+              <div class="slide">
+                  <figure>
+                      <img src="https://i.postimg.cc/WbzY3YX4/taxi.webp" height="100" width="250" alt="Taxi" />
+                      <figcaption>Taxi</figcaption>
+                  </figure>
+              </div>
+              <div class="slide">
                 <figure>
-                    <img src="amenitiesimages/wifi.webp" height="100" width="250" alt="WiFi" />
+                    <img src="https://i.postimg.cc/HsNZ70h9/wifi.webp" height="100" width="250" alt="WiFi" />
                     <figcaption>WiFi</figcaption>
                 </figure>
             </div>
             <div class="slide">
                 <figure>
-                    <img src="amenitiesimages/terrace.webp" height="100" width="250" alt="Terrace" />
+                    <img src="https://i.postimg.cc/R05ggS93/terrace.webp" height="100" width="250" alt="Terrace" />
                     <figcaption>Terrace</figcaption>
                 </figure>
             </div>
             <div class="slide">
                 <figure>
-                    <img src="amenitiesimages/garden.webp" height="100" width="250" alt="Garden" />
+                    <img src="https://i.postimg.cc/50Jk2xRc/garden.webp" height="100" width="250" alt="Garden" />
                     <figcaption>Garden</figcaption>
                 </figure>
             </div>
             <div class="slide">
                 <figure>
-                    <img src="amenitiesimages/restaurant.webp" height="100" width="250" alt="Restaurant" />
+                    <img src="https://i.postimg.cc/zD0PqYwM/restaurant.webp" height="100" width="250" alt="Restaurant" />
                     <figcaption>Restaurant</figcaption>
                 </figure>
             </div>
             <div class="slide">
                 <figure>
-                    <img src="amenitiesimages/roomservice.webp" height="100" width="250" alt="Room Service" />
+                    <img src="https://i.postimg.cc/brC6g1N8/roomservice.webp" height="100" width="250" alt="Room Service" />
                     <figcaption>Room Service</figcaption>
                 </figure>
             </div>
             <div class="slide">
                 <figure>
-                    <img src="amenitiesimages/kettle.webp" height="100" width="250" alt="Kettle" />
+                    <img src="https://i.postimg.cc/qRGDt9PN/kettle.webp" height="100" width="250" alt="Kettle" />
                     <figcaption>Kettle</figcaption>
                 </figure>
             </div>
             <div class="slide">
                 <figure>
-                    <img src="amenitiesimages/toiletries.webp" height="100" width="250" alt="Toiletries" />
+                    <img src="https://i.postimg.cc/NjrN89hq/toiletries.webp" height="100" width="250" alt="Toiletries" />
                     <figcaption>Toiletries</figcaption>
                 </figure>
             </div>
-            <div class="slide">
-                <figure>
-                    <img src="amenitiesimages/parking.webp" height="100" width="250" alt="Parking" />
-                    <figcaption>Parking</figcaption>
-                </figure>
-            </div>
-            <div class="slide">
-                <figure>
-                    <img src="amenitiesimages/taxi.webp" height="100" width="250" alt="Taxi" />
-                    <figcaption>Taxi</figcaption>
-                </figure>
-            </div>
-            <div class="slide">
-                <figure>
-                    <img src="amenitiesimages/wifi.webp" height="100" width="250" alt="WiFi" />
-                    <figcaption>WiFi</figcaption>
-                </figure>
-            </div>
-            <div class="slide">
-                <figure>
-                    <img src="amenitiesimages/terrace.webp" height="100" width="250" alt="Terrace" />
-                    <figcaption>Terrace</figcaption>
-                </figure>
-            </div>
-            <div class="slide">
-                <figure>
-                    <img src="amenitiesimages/garden.webp" height="100" width="250" alt="Garden" />
-                    <figcaption>Garden</figcaption>
-                </figure>
-            </div>
-            <div class="slide">
-                <figure>
-                    <img src="amenitiesimages/restaurant.webp" height="100" width="250" alt="Restaurant" />
-                    <figcaption>Restaurant</figcaption>
-                </figure>
-            </div>
-            <div class="slide">
-                <figure>
-                    <img src="amenitiesimages/roomservice.webp" height="100" width="250" alt="Room Service" />
-                    <figcaption>Room Service</figcaption>
-                </figure>
-            </div>
-            <div class="slide">
-                <figure>
-                    <img src="amenitiesimages/kettle.webp" height="100" width="250" alt="Kettle" />
-                    <figcaption>Kettle</figcaption>
-                </figure>
-            </div>
-            <div class="slide">
-                <figure>
-                    <img src="amenitiesimages/toiletries.webp" height="100" width="250" alt="Toiletries" />
-                    <figcaption>Toiletries</figcaption>
-                </figure>
-            </div>
-        </div>
-    </div>
-</div>
+          </div>
+      </div>
+  </div>
 
   <div class="storycontainer">
     <div class="storyboard">

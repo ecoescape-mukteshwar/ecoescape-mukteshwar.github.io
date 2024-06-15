@@ -965,6 +965,7 @@ header .carousel-inner .item {
 		width: 20%;
 		height: auto;
     padding-bottom: 22px;
+    margin-left: 20px;
 	  }
   
 	#sidebar {
@@ -972,7 +973,7 @@ header .carousel-inner .item {
 	  left: 0;
 	  top: 0;
 	  height: auto;
-	  padding: 20px 20px 0px 20px;
+	  padding: 0px 0px 0px 0px;
     opacity: 10;
     position: fixed;
     z-index: 1000;
@@ -984,7 +985,7 @@ header .carousel-inner .item {
 	  display: block;
 	  position: absolute;
 	  right: 12%;
-	  top: 65px;
+	  top: 45px;
 	}
 	#sidebar .components {
 	  display: none;
@@ -1012,11 +1013,13 @@ header .carousel-inner .item {
   .testimonial{
     position: relative;
   }
-  
 
-.mb-5 {
-  margin-bottom: 0 !important;
-}
+  .p-4 {
+      padding: 0rem !important;
   }
+  .mb-5 {
+    margin-bottom: 0 !important;
+  }
+}
   
   
