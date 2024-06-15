@@ -440,19 +440,59 @@
       </div>
   </div>
 
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
   <div class="storycontainer">
     <div class="storyboard">
-      <h1>Story Board</h1>
+        <h1>Story Board</h1>
         <div class="video-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/r7K9WifLH9o?si=p_QPTarGAtlH9-XE" 
-                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
-                encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            <div class="video-placeholder" onclick="loadVideo()">
+                <img src="placeholder.png" alt="Video Placeholder" width="700" height="315">
+                <div class="play-button"></div>
+            </div>
+            <iframe width="560" height="315" class="lazyload" id="videoIframe"
+                data-src="https://www.youtube.com/embed/r7K9WifLH9o?si=p_QPTarGAtlH9-XE" title="YouTube video player"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display:none;">
             </iframe>
         </div>
     </div>
-  </div>
+</div>
 
+<script>
+function loadVideo() {
+    var iframe = document.getElementById('videoIframe');
+    iframe.src = iframe.getAttribute('data-src');
+    iframe.style.display = 'block';
+    document.querySelector('.video-placeholder').style.display = 'none';
+}
+</script>
+<style>
+  .video-container {
+      position: relative;
+      width: 760px;
+      height: auto;
+  }
+  .video-placeholder {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #000;
+  }
+  .play-button {
+      position: absolute;
+      width: 68px;
+      height: 48px;
+      background: url('path/to/play-button.png') no-repeat;
+      background-size: contain;
+  }
+  </style>
 
   <section class="testimonial text-center">
     <div class="container">
