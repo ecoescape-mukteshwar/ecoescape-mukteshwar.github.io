@@ -97,6 +97,9 @@
         padding-top: 50px;
         margin-left: 400px;
       }
+      .enquirenow{
+        padding-bottom: 15%;
+      }
       .carousel-caption{
         padding-bottom: 550px;
         margin-left: 22%;
@@ -176,14 +179,14 @@
                 <li id="rooms-nav" class="nav-item"><a href="./rooms"> Rooms</a></li>
                 <li id="gallery-nav" class="nav-item"><a href="/"> Gallery</a></li>
                 <li id="tariffs-nav" class="nav-item"><a href="/"> Tariffs</a></li>
-                <li id="contact-nav" class="nav-item"><a href="/"> Contact Us</a></li>
+                <li id="contact-nav" class="nav-item"><a href="./contactus"> Contact Us</a></li>
             </ul>
             <div class="menu">
                 <div class="menu-line"></div>
                 <div class="menu-line"></div>
                 <div class="menu-line"></div>
             </div>
-            <div class="footer">
+            <div class="footer1">
               <p><b>📞 +91 9667846787</b></p>
               <p><b>📧 ecoescape.mukteshwar@gmail.com</b></p>
             </div>
@@ -200,7 +203,7 @@
         "/rooms": "rooms-nav",
         "/gallery": "gallery-nav",
         "/tariffs": "tariffs-nav",
-        "/contact": "contact-nav"
+        "/contactus": "contact-nav"
     };
     const activeNavId = navItems[path];
     if (activeNavId) {
@@ -209,13 +212,37 @@
   });
 </script>
 
-  <div class="icon-bar">
-    <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
-    <a href="https://www.youtube.com/@EcoEscape-mukteshwar" class="youtube"><i class="fab fa-youtube"></i></a>
-    <a href="https://www.instagram.com/ecoescape.mukteshwar" class="instagram"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.accuweather.com/en/in/mukteshwar/3014461/weather-forecast/3014461" class="weather"><i class="fa fa-cloud"></i></a>
-    <a href="tel:+91 9667846787" class="phone"><i class="fa-solid fa-phone"></i></a>
-  </div>
+<button class="toggle-button" onclick="toggleIconBar()">
+  <i class="fas fa-chevron-left" style="color: #3586ff;"></i>
+</button>
+<div class="icon-bar" id="iconBar">
+  <a href="https://www.facebook.com/people/Ecoescape-Mukteshwar/61554610562549/" class="facebook"><i class="fab fa-facebook"></i></a>
+  <a href="https://www.youtube.com/@EcoEscape-mukteshwar" class="youtube"><i class="fab fa-youtube"></i></a>
+  <a href="https://www.instagram.com/ecoescape.mukteshwar" class="instagram"><i class="fab fa-instagram"></i></a>
+  <a href="tel:+91 9667846787" class="phone"><i class="fa-solid fa-phone"></i></a>
+  <a href="https://www.accuweather.com/en/in/mukteshwar/3014461/weather-forecast/3014461" class="weather"><i class="fa fa-cloud"></i></a>
+  <a href="https://www.tripadvisor.co.uk/Hotel_Review-g1162527-d26876576-Reviews-Ecoescape_Mukteshwar-Mukteshwar_Nainital_District_Uttarakhand.html" class="tripadvisor"><img src="image/tripadvisor.svg" alt="Trip Advisor"></a>
+</div>
+
+<script>
+  function toggleIconBar() {
+    var iconBar = document.getElementById("iconBar");
+    var toggleButton = document.querySelector(".toggle-button i");
+
+    if (iconBar.style.transform === "translateX(-100%)") {
+      iconBar.style.transform = "translateY(-50%)";
+      iconBar.style.left = "0";
+      toggleButton.parentElement.style.left = "50px";
+      toggleButton.className = "fas fa-chevron-left";
+    } else {
+      iconBar.style.transform = "translateX(-100%)";
+      iconBar.style.left = "-200px";  // Adjust this value based on the width of your icon bar
+      toggleButton.parentElement.style.left = "0";
+      toggleButton.className = "fas fa-chevron-right";
+    }
+  }
+</script>
+
 <a href="https://wa.me/919667846787?text=Name%3A%0AEmail%3A%0AMobile%20Number%3A%0AWhere%20are%20you%20from%3A%0ACheck%20In%3A%0ACheck%20Out%3A%0ANo%20of%20rooms%3A%0AType%20of%20rooms%3A%0A" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
 
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -466,7 +493,7 @@
     <div class="video-container">
       <div class="video-placeholder" onclick="loadVideo()">
         <img src="placeholder.png" alt="Video Placeholder" width="700" height="315">
-        <div class="play-button"></div>
+        <!-- <div class="play-button"></div> -->
       </div>
       <iframe width="560" height="315" class="lazyload" id="videoIframe"
               data-src="https://www.youtube.com/embed/r7K9WifLH9o?autoplay=1&si=p_QPTarGAtlH9-XE" title="YouTube video player"
@@ -504,13 +531,13 @@ function loadVideo() {
     justify-content: center;
     background-color: #000;
 }
-.play-button {
+/* .play-button {
     position: absolute;
     width: 68px;
     height: 48px;
     background: url('path/to/play-button.png') no-repeat;
     background-size: contain;
-}
+} */
 </style>
 
 
@@ -580,8 +607,20 @@ function loadVideo() {
                 <i class="fa fa-angle-right" aria-hidden="true"></i>
                 <span class="sr-only">Next</span>
             </button>
-        </div>
-    </div>
+          </div>
+          <div id="testimonial-widget" class="testimonial-widget">
+              <div id="TA_excellent865" class="TA_excellent">
+                  <ul id="Ap81GX4Tfhn" class="TA_links 3eFKoPiqDeL1">
+                      <li id="xkWjRaF5RKRF" class="xsCXNt">
+                          <a target="_blank" href="https://www.tripadvisor.co.uk/Hotel_Review-g1162527-d26876576-Reviews-Ecoescape_Mukteshwar-Mukteshwar_Nainital_District_Uttarakhand.html">
+                            <img src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg" alt="TripAdvisor" class="widEXCIMG" id="CDSWIDEXCLOGO"/>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+            <script async src="https://www.jscache.com/wejs?wtype=excellent&amp;uniq=865&amp;locationId=26876576&amp;lang=en_UK&amp;display_version=2" data-loadtrk onload="this.loadtrk=true"></script>
+          </div>
+      </div>
 </section>
 
 
@@ -695,6 +734,43 @@ function loadVideo() {
     </form>
   </div>
 </section>
+
+<footer class="footer">
+    <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+    </div>
+    <ul class="social-icon">
+        <li class="social-icon__item"><a class="social-icon__link" href="https://www.facebook.com/people/Ecoescape-Mukteshwar/61554610562549/"><ion-icon name="logo-facebook"></ion-icon></a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="https://www.youtube.com/@EcoEscape-mukteshwar"><ion-icon name="logo-youtube"></ion-icon></a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="https://www.accuweather.com/en/in/mukteshwar/3014461/weather-forecast/3014461"><ion-icon name="rainy-outline"></ion-icon></a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="https://www.instagram.com/ecoescape.mukteshwar"><ion-icon name="logo-instagram"></ion-icon></a></li>
+    </ul>
+    <ul class="footermenu">
+        <li class="footermenu__item"><a class="footermenu__link" href="#">Home</a></li>
+        <li class="footermenu__item"><a class="footermenu__link" href="#">About</a></li>
+        <li class="footermenu__item"><a class="footermenu__link" href="#">Services</a></li>
+        <li class="footermenu__item"><a class="footermenu__link" href="#">Contact</a></li>
+    </ul>
+    <div id="tripadvisor-widget" class="tripadvisor-widget">
+        <div id="TA_rated122" class="TA_rated">
+            <ul id="BayVGkpcE" class="TA_links RNs3wRy">
+                <li id="8uXFoPCpS3" class="kXxuGYf">
+                    <a target="_blank" href="https://www.tripadvisor.co.uk/Hotel_Review-g1162527-d26876576-Reviews-Ecoescape_Mukteshwar-Mukteshwar_Nainital_District_Uttarakhand.html">
+                        <img src="https://www.tripadvisor.co.uk/img/cdsi/img2/badges/ollie-11424-2.gif" alt="TripAdvisor"/>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <p>&copy;2024 EcoEscape | All Rights Reserved</p>
+</footer>
+<script async src="https://www.jscache.com/wejs?wtype=rated&amp;uniq=122&amp;locationId=26876576&amp;lang=en_UK&amp;display_version=2" data-loadtrk onload="this.loadtrk=true"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 
 <script>
   (function() {
@@ -824,69 +900,6 @@ function loadVideo() {
       });
   })();
 </script>
-
-  
-<!-- <script>
-  (function() {
-      document.getElementById('bookingForm').addEventListener('submit', function(event) {
-          event.preventDefault();
-  
-          var form = event.target;
-          var name = form.name.value.trim();
-          var email = form.email.value.trim();
-          var mobile = form.mobile.value.trim();
-          var location = form.location.value.trim();
-          var occupation = form.occupation.value.trim();
-          var checkin = form.checkin.value;
-          var checkout = form.checkout.value;
-          var adults = form.adults.value.trim();
-          var kids = form.kids.value.trim();
-          var rooms = form.rooms.value.trim();
-          var roomType = form.roomType.value;
-          var extraBed = form.extraBed.value;
-          var driverStay = form.driverStay.value;
-          var dog = form.dog.value;
-          var comments = form.comments.value.trim();
-  
-          if (!name || !email || !mobile || !location || !occupation || !checkin || !checkout || !adults || !rooms || !roomType || !extraBed || !driverStay || !dog) {
-              alert('Please fill in all required fields.');
-              return;
-          }
-  
-          if (!validateEmail(email)) {
-              alert('Please enter a valid email address.');
-              return;
-          }
-  
-          if (!validateMobile(mobile)) {
-              alert('Please enter a valid 10-digit mobile number.');
-              return;
-          }
-  
-          gtag('event', 'conversion_event_purchase_1', {
-            'send_to': 'AW-11455693097/xxxxxx'
-          });
-  
-          form.submit();
-  
-          var whatsappMessage = `Name: ${name}%0AEmail: ${email}%0AMobile: ${mobile}%0AWhere are you from: ${location}%0AWhat work do you do: ${occupation}%0ACheck In: ${checkin}%0ACheck Out: ${checkout}%0AAdults: ${adults}%0AKids: ${kids}%0ANo of rooms: ${rooms}%0AType of rooms: ${roomType}%0ANeed extra bed: ${extraBed}%0ANeed driver's stay: ${driverStay}%0ABringing your dog along: ${dog}%0AComments: ${comments}`;
-  
-          var whatsappUrl = `https://wa.me/919667846787?text=${whatsappMessage}`;
-          window.open(whatsappUrl, '_blank');
-  
-          form.reset();
-      });
-  
-      function validateEmail(email) {
-          var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-          return re.test(String(email).toLowerCase());
-      }
-  
-      function validateMobile(mobile) {
-          return /^[0-9]{10}$/.test(mobile);
-      }
-  })();
-</script> -->
 
 </body>
 </html>

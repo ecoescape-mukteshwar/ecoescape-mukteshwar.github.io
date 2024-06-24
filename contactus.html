@@ -1,11 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <title>Ecoescape Mukteshwar</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Welcome to Ecoescape Mukteshwar, offering cozy rooms with breathtaking views, luxurious amenities, and a tranquil escape in nature. Book your stay now!">
+
+  <!-- Favicon -->
+  <link rel="icon" href="image/LOGO-removebg-preview.webp" type="image/webp">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Ecoescape Mukteshwar",
+    "url": "https://ecoescapemukteshwar.com",
+    "logo": "image/LOGO-removebg-preview.webp",
+    "description": "Welcome to Ecoescape Mukteshwar, offering cozy rooms with breathtaking views, luxurious amenities, and a tranquil escape in nature. Book your stay now!",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-9667846787",
+      "contactType": "Customer Service"
+    }
+  }
+  </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="contactus.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P1EDMZPGVW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
     
+        gtag('config', 'G-P1EDMZPGVW');
+    </script>
+</head>
+
+<body>
+    <div class="navbar-container">
+        <nav id="sidebar" class="img">
+          <div class="p-4">
+              <h1><a href="index.html" class="logo"><img src="image/LOGO-removebg-preview.webp" alt="Ecoescape Logo" class="logo-img"></a></h1>
+              <ul class="list-unstyled components mb-5">
+                  <li id="home-nav" class="nav-item"><a href="/"> Home</a></li>
+                  <li id="about-nav" class="nav-item"><a href="/"> About Us</a></li>
+                  <li id="rooms-nav" class="nav-item"><a href="./rooms"> Rooms</a></li>
+                  <li id="gallery-nav" class="nav-item"><a href="/"> Gallery</a></li>
+                  <li id="tariffs-nav" class="nav-item"><a href="/"> Tariffs</a></li>
+                  <li id="contact-nav" class="nav-item"><a href="./contactus"> Contact Us</a></li>
+              </ul>
+              <div class="menu">
+                  <div class="menu-line"></div>
+                  <div class="menu-line"></div>
+                  <div class="menu-line"></div>
+              </div>
+              <div class="footer1">
+                <p><b>📞 +91 9667846787</b></p>
+                <p><b>📧 ecoescape.mukteshwar@gmail.com</b></p>
+              </div>
+          </div>
+        </nav>
+      </div>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const path = window.location.pathname.replace(/\.html$/, "") || "/";
+      const navItems = {
+          "/": "home-nav",
+          "/about": "about-nav",
+          "/rooms": "rooms-nav",
+          "/gallery": "gallery-nav",
+          "/tariffs": "tariffs-nav",
+          "/contactus": "contact-nav"
+      };
+      const activeNavId = navItems[path];
+      if (activeNavId) {
+          document.getElementById(activeNavId).classList.add("active");
+      }
+    });
+  </script>
+  <script>
+    const menu = document.querySelector('.menu');
+    const sidebar = document.querySelector('#sidebar');
+    const navbarItems = document.querySelectorAll('#sidebar .components li');
+
+    menu.addEventListener('click', () => {
+        sidebar.classList.toggle('show');
+        navbarItems.forEach(item => {
+            item.classList.toggle('hide-icons');
+        });
+    });
+  </script>
+  <button class="toggle-button" onclick="toggleIconBar()">
+    <i class="fas fa-chevron-left" style="color: #3586ff;"></i>
+  </button>
+  <div class="icon-bar" id="iconBar">
+    <a href="https://www.facebook.com/people/Ecoescape-Mukteshwar/61554610562549/" class="facebook"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.youtube.com/@EcoEscape-mukteshwar" class="youtube"><i class="fab fa-youtube"></i></a>
+    <a href="https://www.instagram.com/ecoescape.mukteshwar" class="instagram"><i class="fab fa-instagram"></i></a>
+    <a href="tel:+91 9667846787" class="phone"><i class="fa-solid fa-phone"></i></a>
+    <a href="https://www.accuweather.com/en/in/mukteshwar/3014461/weather-forecast/3014461" class="weather"><i class="fa fa-cloud"></i></a>
+    <a href="https://www.tripadvisor.co.uk/Hotel_Review-g1162527-d26876576-Reviews-Ecoescape_Mukteshwar-Mukteshwar_Nainital_District_Uttarakhand.html" class="tripadvisor"><img src="image/tripadvisor.svg" alt="Trip Advisor"></a>
+  </div>
+
+  <script>
+    function toggleIconBar() {
+      var iconBar = document.getElementById("iconBar");
+      var toggleButton = document.querySelector(".toggle-button i");
+
+      if (iconBar.style.transform === "translateX(-100%)") {
+        iconBar.style.transform = "translateY(-50%)";
+        iconBar.style.left = "0";
+        toggleButton.parentElement.style.left = "50px";
+        toggleButton.className = "fas fa-chevron-left";
+      } else {
+        iconBar.style.transform = "translateX(-100%)";
+        iconBar.style.left = "-200px";  // Adjust this value based on the width of your icon bar
+        toggleButton.parentElement.style.left = "0";
+        toggleButton.className = "fas fa-chevron-right";
+      }
+    }
+  </script>
+  <a href="https://wa.me/919667846787?text=Name%3A%0AEmail%3A%0AMobile%20Number%3A%0AWhere%20are%20you%20from%3A%0ACheck%20In%3A%0ACheck%20Out%3A%0ANo%20of%20rooms%3A%0AType%20of%20rooms%3A%0A" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+
+  <div class="contactus-container">
+    <h1>Contact Us</h1>
+    <div class="contactinfo">
+      <p>Reception Office</p>
+      <h5>Mukteshwar, Sunder Khal, Uttarakhand 263132</h5>
+      <p>Reception Hours</p>
+      <h5>24 hours</h5>
+      <p>Contact</p>
+      <h5 class="contactnumber">+91-84749 10008</h5>
+      <h5>ecoescapemukteshwar@gmail.com</h5>
+      <p>Follow</p>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/ecoescape.mukteshwar"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/people/Ecoescape-Mukteshwar/61554610562549/"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.youtube.com/@EcoEscape-mukteshwar"><i class="fab fa-youtube"></i></a>
+    </div>
+    </div>
+    <div class="contactform">
+      <form action="https://api.web3forms.com/submit" method="POST" id="bookingForm">
+        <input type="hidden" name="access_key" value="f0971542-f6e4-4ea1-9d7a-7828a6101abd"/>
+        <input type="hidden" name="subject" value="New Booking Submission from Ecoescape Contact s Page">
+
+        <label for="name">Name *</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required>
+        <label for="subject">Subject *</label>
+        <input type="text" id="subject" name="subject" required>
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+    </div>
+  </div>
+  <div class="map-responsive">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3475.48361406343!2d79.6699277755298!3d29.414658675246706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a0bfd16ab8aa89%3A0x52bf2d7cee7afcca!2sEcoEscape%20Mukteshwar!5e0!3m2!1sen!2sin!4v1715741262566!5m2!1sen!2sin"
+    style="border: 5px solid rgb(15, 188, 241);" 
+    width="40%"
+    height="400px"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+  
+<footer class="footer">
+  <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+  </div>
+  <ul class="social-icon">
+      <li class="social-icon__item"><a class="social-icon__link" href="https://www.facebook.com/people/Ecoescape-Mukteshwar/61554610562549/"><ion-icon name="logo-facebook"></ion-icon></a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="https://www.youtube.com/@EcoEscape-mukteshwar"><ion-icon name="logo-youtube"></ion-icon></a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="https://www.accuweather.com/en/in/mukteshwar/3014461/weather-forecast/3014461"><ion-icon name="rainy-outline"></ion-icon></a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="https://www.instagram.com/ecoescape.mukteshwar"><ion-icon name="logo-instagram"></ion-icon></a></li>
+  </ul>
+  <ul class="footermenu">
+      <li class="footermenu__item"><a class="footermenu__link" href="#">Home</a></li>
+      <li class="footermenu__item"><a class="footermenu__link" href="#">About</a></li>
+      <li class="footermenu__item"><a class="footermenu__link" href="#">Services</a></li>
+      <li class="footermenu__item"><a class="footermenu__link" href="#">Contact</a></li>
+  </ul>
+  <div id="tripadvisor-widget" class="tripadvisor-widget">
+      <div id="TA_rated122" class="TA_rated">
+          <ul id="BayVGkpcE" class="TA_links RNs3wRy">
+              <li id="8uXFoPCpS3" class="kXxuGYf">
+                  <a target="_blank" href="https://www.tripadvisor.co.uk/Hotel_Review-g1162527-d26876576-Reviews-Ecoescape_Mukteshwar-Mukteshwar_Nainital_District_Uttarakhand.html">
+                      <img src="https://www.tripadvisor.co.uk/img/cdsi/img2/badges/ollie-11424-2.gif" alt="TripAdvisor"/>
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  <p>&copy;2024 EcoEscape | All Rights Reserved</p>
+</footer>
+<script async src="https://www.jscache.com/wejs?wtype=rated&amp;uniq=122&amp;locationId=26876576&amp;lang=en_UK&amp;display_version=2" data-loadtrk onload="this.loadtrk=true"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+ <script>
+    // Lazy load the web3forms script asynchronously
+    (function() {
+      var script = document.createElement('script');
+      script.src = 'https://web3forms.com/client/script.js';
+      script.async = true;
+      document.body.appendChild(script);
+    })();
+  </script>
 </body>
 </html>
