@@ -1,0 +1,617 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playball&display=swap');
+
+@font-face {
+	font-family: Playball;
+	src: url(Playball-Regular.ttf);
+  }
+
+body {
+    font-family: Lato, sans-serif;
+    background-color: #f5f5f5;
+}
+
+
+/* Sidebar Styles */
+.navbar-container{
+  z-index: 3;
+}
+
+#sidebar {
+width: 320px;
+position: fixed;
+top: 0;
+left: 60px;
+height: 100%;
+background-color: black;
+opacity: 0.8;
+padding: 20px;
+transition: all 0.3s;
+font-family: Lato;
+z-index: 2;
+}
+#sidebar.show {
+right: 0;
+}
+#sidebar .logo {
+font-size: 24px;
+font-weight: 700;
+color: #ffffff;
+text-decoration: none;
+}
+#sidebar .components {
+padding: 20px 0;
+margin: 0;
+}
+#sidebar .components li {
+padding: 10px;
+list-style-type: none;
+cursor: pointer;
+}
+#sidebar .components li a {
+color: #ffffff;
+text-decoration: none;
+display: block;
+transition: all 0.3s;
+line-height: 2;
+font-family: Lato, sans-serif;
+font-size: 15px;
+font-weight: 500;
+}
+#sidebar .components li a:hover {
+color: #FFC80B;
+}
+/* Active Nav Item */
+.nav-item.active a {
+  color: #FFC80B !important;
+}
+
+#sidebar .footer1 {
+position: absolute;
+bottom: 30px;
+left: 20px;
+width: calc(100% - 40px);
+color: #ffffff;
+font-family: Lato, sans-serif;
+font-size: 14px;
+}
+.menu-line {
+height: 4px;
+width: 30px;
+background-color: #91e0fd;
+margin-bottom: 5px;
+}
+.menu {
+cursor: pointer;
+display: none;
+}
+#content {
+margin-left: 400px;
+padding: 20px;
+width: calc(100% - 435px);
+}
+
+/* Logo Image */
+.logo-img {
+width:60%;
+height: auto;
+}
+
+/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.youtube {
+  background: #dc4141;
+  color: white;
+}
+
+.instagram {
+  background: #ffa7a7;
+  color: white;
+}
+
+.weather {
+  background: #3b3b37;
+  color: white;
+}
+.tripadvisor{
+background: #26da7d;
+}
+.toggle-button {
+position: fixed;
+top: 49%;
+/* left: 0; */
+transform: translateY(-50%);
+z-index: 1001;
+background-color: transparent;
+color: white;
+border: none;
+cursor: pointer;
+left: 50px;
+font-size: 30px;
+}
+/* Styles for WhatsApp icon at bottom right */
+.whatsapp {
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  background: #41eb63;
+  color: white;
+  padding-top: 5px;
+  height: 56px;
+  width: 56px;
+  border-radius: 50%;
+  align-self: center;
+  text-align: center;
+  font-size: 30px;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.whatsapp:hover {
+  background-color: #000;
+}
+
+.phone{
+background:#32fd6b;
+}
+body {
+  overflow-y: auto; 
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+
+}
+
+
+.tripadvisor-widget {
+  display: none;
+  position: absolute;
+  right: 10%;
+  bottom: 35%;
+}
+
+
+/* Show the widget only on screens wider than 900px */
+@media (min-width: 900px) {
+  .tripadvisor-widget {
+      display: block;
+  }
+}
+
+
+@media (max-width: 1040px) {
+    .social-icons{
+      margin-bottom: 10%;
+    }
+  }
+  
+  @media (max-width: 480px){
+    .footermenu{
+      margin-right: 20px !important;
+    }
+  }
+  
+  @media (max-width: 900px) {
+      .logo-img {
+          width: 20%;
+          height: auto;
+      margin-left: 20px;
+      padding-top: 10px;
+      padding-bottom: 12px;
+    }
+    
+      #sidebar {
+        width: 100%;
+        left: 0;
+        top: 0;
+        height: auto;
+        padding: 0px 0px 0px 0px;
+      opacity: 10;
+      position: fixed;
+      z-index: 1000;
+      }
+      #sidebar .logo {
+        text-align: center;
+      }
+      #sidebar .menu {
+        display: block;
+        position: absolute;
+        right: 12%;
+        top: 45px;
+      }
+      #sidebar .components {
+        display: none;
+      }
+      #sidebar .components li {
+        padding: 10px;
+        list-style-type: none;
+        text-align: center;
+      }
+      #sidebar .components li.hide-icons span {
+        display: none;
+      }
+      #sidebar.show .components {
+        display: block;
+      }
+      .footer1 {
+        display: none;
+      }
+    .p-4 {
+      padding: 10px !important;
+    }
+    .mb-5, .my-5 {
+        margin-bottom: 0rem !important;;
+    }
+  }
+
+  
+  /* Gallery Container */
+    .gallery-container {
+        margin-top: 7rem;
+        margin-left: 24%;
+        margin-bottom: 10%;
+        padding: 0 10%;
+        text-align: center;
+    }
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  ::selection{
+    color: #fff;
+    background: #007bff;
+  }
+
+  
+body{
+    background-color: #f5f5f5;
+  }
+  
+  .title {
+      /* margin-top: 100px; */
+      text-align: center; 
+      font-family: Lato, sans-serif;
+      font-size: 36px;
+  }
+  
+  .title h1{
+      display: block;
+      font-weight: 800;
+  }
+  .title h2 {
+      display: block; /* Ensure each heading is on a separate line */
+      font-size: 32px;
+      font-weight: 700;
+  }
+  
+  
+  .wrapper{
+    margin: 50px auto;
+    max-width: 1100px;
+    text-align: center;
+  }
+  .wrapper .nav{
+    display: flex;
+    justify-content: center;
+  }
+  .wrapper .items{
+    display: flex;
+    max-width: 720px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .wrapper .item{
+      margin-right: 25px;
+  }
+  .items span{
+    padding: 11px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #007bff;
+    border-radius: 50px;
+    border: 2px solid #007bff;
+    transition: all 0.3s ease;
+  }
+  .items span.active,
+  .items span:hover{
+    color: #fff;
+    background: #007bff;
+  }
+  
+  .gallery{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+  .gallery .image{
+    width: calc(100% / 4);
+    padding: 7px;
+  }
+  .gallery .image span{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+  }
+  .gallery .image img{
+    width: 100%;
+    vertical-align: middle;
+    transition: all 0.3s ease;
+  }
+  .gallery .image:hover img{
+    transform: scale(1.1);
+  }
+  .gallery .image.hide{
+    display: none;
+  }
+  .gallery .image.show{
+    animation: animate 0.4s ease;
+  }
+  @keyframes animate {
+    0%{
+      transform: scale(0.5);
+    }
+    100%{
+      transform: scale(1);
+    }
+  }
+  
+  .preview-box{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background: #fff;
+    max-width: 700px;
+    width: 100%;
+    z-index: 5;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 3px;
+    padding: 0 5px 5px 5px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+  }
+  .preview-box.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+    transition: all 0.3s ease;
+  }
+  .preview-box .details{
+    padding: 13px 15px 13px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .details .title{
+    display: flex;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .details .title p{
+    font-weight: 500;
+    margin-left: 5px;
+  }
+  .details .icon{
+    color: #007bff;
+    font-style: 22px;
+    cursor: pointer;
+  }
+  .preview-box .image-box{
+    width: 100%;
+    display: flex;
+  }
+  .image-box img{
+    width: 100%;
+    border-radius: 0 0 3px 3px;
+  }
+  .shadow{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    display: none;
+    background: rgba(0,0,0,0.4);
+  }
+  .shadow.show{
+    display: block;
+  }
+  
+
+  @media (max-width: 1000px) {
+    .gallery .image{
+      width: calc(100% / 3);
+    }
+  }
+  @media (max-width: 800px) {
+    .gallery .image{
+      width: calc(100% / 2);
+    }
+  }
+
+  @media (max-width: 700px) {
+    .wrapper .nav .items{
+      max-width: 600px;
+    }
+    nav .items span{
+      padding: 7px 15px;
+    }
+  }
+  @media (max-width: 600px) {
+    .wrapper .nav .items{
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .nav .items span{
+      margin: 5px;
+    }
+    .gallery .image{
+      width: 100%;
+    }
+  }
+  @media (max-width: 1040px) {
+    .gallery-container {
+        padding: 0 5%;
+        margin-left: 37%;
+        margin-bottom: 15%;
+    }
+    .items span {
+      padding: 8px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+  }
+  @media (max-width: 480px) {
+    .gallery-container {
+        padding: 0 2%;
+        margin-left: 0%;
+        margin-bottom: 30%;
+    }
+}  
+
+
+
+/* Footer */
+
+.footertop{
+  background-color: #f5f5f5;
+}
+.footer {
+  position: relative;
+  max-width: 100%;
+  background: #3586ff;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon,
+.footermenu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+  margin-left: 40px;
+}
+
+.social-icon__item,
+.footermenu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.footermenu__link {
+  font-size: 13px;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.footermenu__link:hover {
+  opacity: 1;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0px 10px 20px;
+  font-size: 10px;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("https://i.ibb.co/wQZVxxk/wave.png");
+  background-size: 1000px 100px;
+  z-index: 1;
+}
+
+.wave#wave1 {
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
