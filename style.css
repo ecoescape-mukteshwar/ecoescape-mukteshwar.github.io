@@ -1189,3 +1189,9 @@ header .carousel-inner .item {
       display: block;
   }
 }
+
+@media (min-width: 1500px){
+  .slider{
+    margin-left: 30%;
+  }
+}
