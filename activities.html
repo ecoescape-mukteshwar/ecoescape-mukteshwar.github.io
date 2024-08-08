@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Ecoescape Mukteshwar</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Welcome to Ecoescape Mukteshwar, offering cozy rooms with breathtaking views, luxurious amenities, and a tranquil escape in nature. Book your stay now!">
+
+  <!-- Favicon -->
+  <link rel="icon" href="image/LOGO.png" type="image/webp">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Ecoescape Mukteshwar",
+    "url": "https://ecoescapemukteshwar.com",
+    "logo": "image/LOGO-removebg-preview.webp",
+    "description": "Welcome to Ecoescape Mukteshwar, offering cozy rooms with breathtaking views, luxurious amenities, and a tranquil escape in nature. Book your stay now!",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-9667846787",
+      "contactType": "Customer Service"
+    }
+  }
+  </script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="activities.css">
+  <link rel="canonical" href="https://ecoescapemukteshwar.com/activities">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P1EDMZPGVW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'G-P1EDMZPGVW');
+    </script>
+
+</head>
+<body>
+    <div class="navbar-container">
+        <nav id="sidebar" class="img">
+          <div class="p-4">
+              <h1><a href="index.html" class="logo"><img src="image/LOGO-removebg-preview.webp" alt="Ecoescape Logo" class="logo-img"></a></h1>
+              <ul class="list-unstyled components mb-5">
+                  <li id="home-nav" class="nav-item"><a href="/"> Home</a></li>
+                  <li id="about-nav" class="nav-item"><a href="./aboutus"> About Us</a></li>
+                  <li id="rooms-nav" class="nav-item"><a href="./rooms"> Rooms</a></li>
+                  <li id="gallery-nav" class="nav-item"><a href="./gallery"> Gallery</a></li>
+                  <li id="activities-nav" class="nav-item"><a href="./activities"> Activities</a></li>
+                  <li id="contact-nav" class="nav-item"><a href="./contactus"> Contact Us</a></li>
+              </ul>
+              <div class="menu">
+                  <div class="menu-line"></div>
+                  <div class="menu-line"></div>
+                  <div class="menu-line"></div>
+              </div>
+              <div class="footer1">
+                <p><b>📞 +91 9667846787</b></p>
+                <p><b>📧 ecoescape.mukteshwar@gmail.com</b></p>
+              </div>
+          </div>
+        </nav>
+      </div>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const path = window.location.pathname.replace(/\.html$/, "") || "/";
+      const navItems = {
+          "/": "home-nav",
+          "/aboutus": "about-nav",
+          "/rooms": "rooms-nav",
+          "/gallery": "gallery-nav",
+          "/activities": "activities-nav",
+          "/contactus": "contact-nav"
+      };
+      const activeNavId = navItems[path];
+      if (activeNavId) {
+          document.getElementById(activeNavId).classList.add("active");
+      }
+    });
+  </script>
+  <script>
+    const menu = document.querySelector('.menu');
+    const sidebar = document.querySelector('#sidebar');
+    const navbarItems = document.querySelectorAll('#sidebar .components li');
+
+    menu.addEventListener('click', () => {
+        sidebar.classList.toggle('show');
+        navbarItems.forEach(item => {
+            item.classList.toggle('hide-icons');
+        });
+    });
+  </script>
+  <button class="toggle-button" onclick="toggleIconBar()">
+    <i class="fas fa-chevron-left" style="color: #3586ff;"></i>
+  </button>
+  <div class="icon-bar" id="iconBar">
+    <a href="https://www.facebook.com/people/Ecoescape-Mukteshwar/61554610562549/" class="facebook"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.youtube.com/@EcoEscape-mukteshwar" class="youtube"><i class="fab fa-youtube"></i></a>
+    <a href="https://www.instagram.com/ecoescape.mukteshwar" class="instagram"><i class="fab fa-instagram"></i></a>
+    <a href="tel:+91 9667846787" class="phone"><i class="fa-solid fa-phone"></i></a>
+    <a href="https://www.accuweather.com/en/in/mukteshwar/3014461/weather-forecast/3014461" class="weather"><i class="fa fa-cloud"></i></a>
+    <a href="https://www.tripadvisor.co.uk/Hotel_Review-g1162527-d26876576-Reviews-Ecoescape_Mukteshwar-Mukteshwar_Nainital_District_Uttarakhand.html" class="tripadvisor"><img src="image/tripadvisor.svg" alt="Trip Advisor"></a>
+  </div>
+
+  <script>
+    function toggleIconBar() {
+      var iconBar = document.getElementById("iconBar");
+      var toggleButton = document.querySelector(".toggle-button i");
+
+      if (iconBar.style.transform === "translateX(-100%)") {
+        iconBar.style.transform = "translateY(-50%)";
+        iconBar.style.left = "0";
+        toggleButton.parentElement.style.left = "50px";
+        toggleButton.className = "fas fa-chevron-left";
+      } else {
+        iconBar.style.transform = "translateX(-100%)";
+        iconBar.style.left = "-200px";  // Adjust this value based on the width of your icon bar
+        toggleButton.parentElement.style.left = "0";
+        toggleButton.className = "fas fa-chevron-right";
+      }
+    }
+  </script>
+  <a href="https://wa.me/919667846787?text=Name%3A%0AEmail%3A%0AMobile%20Number%3A%0AWhere%20are%20you%20from%3A%0ACheck%20In%3A%0ACheck%20Out%3A%0ANo%20of%20rooms%3A%0AType%20of%20rooms%3A%0A" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+
+  <div class="card-container">
+    <h1>Activities</h1>
+    <article class="card">
+      <img
+        class="card__background"
+        src="activities\ChauliKiJali.png"
+        alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+        width="1920"
+        height="2193"
+      />
+      <div class="card__content | flow">
+        <div class="card__content--container | flow">
+          <h2 class="card__title">Chauli Ki Jali</h2>
+          <p class="card__description">
+            Chauli Ki Jali in Mukteshwar is renowned for its breathtaking sunset views and serves as a popular rock climbing destination. 
+          </p>
+        </div>
+      </div>
+    </article>
+    <article class="card">
+      <img
+        class="card__background"
+        src="activities\BhaluGaad.jpg"
+        alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+        width="1920"
+        height="2193"
+      />
+      <div class="card__content | flow">
+        <div class="card__content--container | flow">
+          <h2 class="card__title">Bhalu Gaad</h2>
+          <p class="card__description">
+            The Bhalu Gaad fall is a 60 feet high fall from the undiscovered source. It is a blend of horseshoe and plunge shaped waterfall. The water flows continuously throughout the year maintaining contact with the rock bed before turning to plunge at the bottom.
+          </p>
+        </div>
+      </div>
+    </article>
+    <article class="card">
+      <img
+        class="card__background"
+        src="activities\Kainchi Dham.jpeg"
+        alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+        width="1920"
+        height="2193"
+      />
+      <div class="card__content | flow">
+        <div class="card__content--container | flow">
+          <h2 class="card__title">Kainchi Dham</h2>
+          <p class="card__description">
+            Kaichi Dham is a beautiful spot in the hills where you can relax and enjoy nature. It's peaceful and great for hiking.
+          </p>
+        </div>
+      </div>
+    </article>
+    <article class="card">
+      <img
+        class="card__background"
+        src="activities\KasarDevi.jpg"
+        alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+        width="1920"
+        height="2193"
+      />
+      <div class="card__content | flow">
+        <div class="card__content--container | flow">
+          <h2 class="card__title">Kasar Devi</h2>
+          <p class="card__description">
+            This temple is situated on the Van Allen Belt of the planet. The area has a large geomagnetic field due to the gaps in the bands of the atmosphere. Kasar Devi is therefore blessed with cosmic energy. It is similar to that of Machu Picchu in Peru and Stonehenge in the UK.
+          </p>
+        </div>
+      </div>
+    </article>
+    <article class="card">
+      <img
+        class="card__background"
+        src="activities\MukteshwarTemple.jpg"
+        alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+        width="1920"
+        height="2193"
+      />
+      <div class="card__content | flow">
+        <div class="card__content--container | flow">
+          <h2 class="card__title">Mukteshwar Temple</h2>
+          <p class="card__description">
+            Mukteshwar Temple is located atop the highest point of Mukteshwar in Nainital district of Uttarakhand. This temple also known as Mukteshwar Dham or Mukteshwar Mahadev Temple. </p>
+        </div>
+      </div>
+    </article>
+    <article class="card">
+      <img
+        class="card__background"
+        src="activities\TeaGardens.jpg"
+        alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+        width="1920"
+        height="2193"
+      />
+      <div class="card__content | flow">
+        <div class="card__content--container | flow">
+          <h2 class="card__title">Tea Gardens</h2>
+          <p class="card__description">
+            The tea gardens in Mukteshwar are a major attraction, offering a picturesque setting and a chance to experience the region's famous tea cultivation. The garden's tea varieties include Darjeeling, Assam, and Oolong, among others. 
+          </p>
+        </div>
+      </div>
+    </article>
+    <article class="card">
+      <img
+        class="card__background"
+        src="activities\ThakurTop.jpg"
+        alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+        width="1920"
+        height="2193"
+      />
+      <div class="card__content | flow">
+        <div class="card__content--container | flow">
+          <h2 class="card__title">Thakur Top</h2>
+          <p class="card__description">
+            Thakur Top is a scenic spot in Mukteshwar. It's a popular tourist destination known for its breathtaking views of the Himalayas. The spot is situated at an altitude of around 9,200 feet above sea level, offering a panoramic view of the surrounding mountains.
+          </p>
+        </div>
+      </div>
+    </article>
+    <article class="card">
+      <img
+        class="card__background"
+        src="activities\BhimtalPark.jpg"
+        alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+        width="1920"
+        height="2193"
+      />
+      <div class="card__content | flow">
+        <div class="card__content--container | flow">
+          <h2 class="card__title">Bhimtal Park</h2>
+          <p class="card__description">
+            Bhimtal Park offers a wealth of natural beauty and recreational opportunities. Its landscapes can bring a sense of calm and wonder, making outdoor activities both engaging and enjoyable.
+          </p>
+        </div>
+      </div>
+    </article>
+    <article class="card">
+        <img
+          class="card__background"
+          src="activities\DhokaneyWaterfall.jpg"
+          alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
+          width="1920"
+          height="2193"
+        />
+        <div class="card__content | flow">
+          <div class="card__content--container | flow">
+            <h2 class="card__title">Dhokaney Waterfall</h2>
+            <p class="card__description">
+                Dhokaney Waterfall is a stunning waterfall hidden in the midst of pine trees, surrounded by mountains and lush green forests.
+            </p>
+          </div>
+        </div>
+      </article>
+  </div>  
+
+  <footer class="footer">
+    <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+    </div>
+    <ul class="social-icon">
+        <li class="social-icon__item"><a class="social-icon__link" href="https://www.facebook.com/people/Ecoescape-Mukteshwar/61554610562549/"><ion-icon name="logo-facebook"></ion-icon></a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="https://www.youtube.com/@EcoEscape-mukteshwar"><ion-icon name="logo-youtube"></ion-icon></a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="https://www.accuweather.com/en/in/mukteshwar/3014461/weather-forecast/3014461"><ion-icon name="rainy-outline"></ion-icon></a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="https://www.instagram.com/ecoescape.mukteshwar"><ion-icon name="logo-instagram"></ion-icon></a></li>
+    </ul>
+    <ul class="footermenu">
+        <li class="footermenu__item"><a class="footermenu__link" href="#">Home</a></li>
+        <li class="footermenu__item"><a class="footermenu__link" href="#">About</a></li>
+        <li class="footermenu__item"><a class="footermenu__link" href="#">Services</a></li>
+        <li class="footermenu__item"><a class="footermenu__link" href="#">Contact</a></li>
+    </ul>
+    <div id="tripadvisor-widget" class="tripadvisor-widget">
+        <div id="TA_rated122" class="TA_rated">
+            <ul id="BayVGkpcE" class="TA_links RNs3wRy">
+                <li id="8uXFoPCpS3" class="kXxuGYf">
+                    <a target="_blank" href="https://www.tripadvisor.co.uk/Hotel_Review-g1162527-d26876576-Reviews-Ecoescape_Mukteshwar-Mukteshwar_Nainital_District_Uttarakhand.html">
+                        <img src="https://www.tripadvisor.co.uk/img/cdsi/img2/badges/ollie-11424-2.gif" alt="TripAdvisor"/>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <p>&copy;2024 EcoEscape | All Rights Reserved</p>
+  </footer>
+  <script async src="https://www.jscache.com/wejs?wtype=rated&amp;uniq=122&amp;locationId=26876576&amp;lang=en_UK&amp;display_version=2" data-loadtrk onload="this.loadtrk=true"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
