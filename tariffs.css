@@ -286,11 +286,12 @@ body {
     font-family: Lato, sans-serif;
     text-align: center;
   }
+
   
-  .tariff-table table {
+  /* .tariff-table table {
     width: 100%;
     border-collapse: collapse;
-  }
+  } */
   
   .tariff-table th,
   .tariff-table td {
@@ -520,4 +521,18 @@ body {
     .footer{
         margin-top: 30%;
     }
+}
+
+@media (max-width: 350px){
+  .tariff-table td{
+    text-align: left;
+  }
+  .season th, .season td {
+    padding: 8px;
+    font-size: 15px;
+  }
+
+  .season th {
+      font-size: 16px;
+  }
 }
