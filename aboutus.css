@@ -100,9 +100,23 @@ height: auto;
 .icon-bar {
   position: fixed;
   top: 50%;
+  left: -200px;
+  transform: translateY(-50%); /* Hidden by default */
+  z-index: 1000;
+}
+
+.toggle-button {
+  position: fixed;
+  top: 49%;
   left: 0;
   transform: translateY(-50%);
-  z-index: 1000;
+  z-index: 1001;
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  left: 50px;
+  font-size: 30px;
 }
 
 .icon-bar a {
@@ -113,6 +127,7 @@ height: auto;
   color: white;
   font-size: 20px;
 }
+
 
 .icon-bar a:hover {
   background-color: #000;
@@ -140,19 +155,7 @@ height: auto;
 .tripadvisor{
 background: #26da7d;
 }
-.toggle-button {
-position: fixed;
-top: 49%;
-/* left: 0; */
-transform: translateY(-50%);
-z-index: 1001;
-background-color: transparent;
-color: white;
-border: none;
-cursor: pointer;
-left: 50px;
-font-size: 30px;
-}
+
 /* Styles for WhatsApp icon at bottom right */
 .whatsapp {
   position: fixed;

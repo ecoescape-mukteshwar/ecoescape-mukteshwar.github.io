@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   </script>
   <button class="toggle-button" onclick="toggleIconBar()">
-    <i class="fas fa-chevron-left" style="color: #3586ff;"></i>
+    <i class="fas fa-chevron-right" style="color: #3586ff;"></i>
   </button>
   <div class="icon-bar" id="iconBar">
     <a href="https://www.facebook.com/people/Ecoescape-Mukteshwar/61554610562549/" class="facebook"><i class="fab fa-facebook"></i></a>
@@ -109,24 +109,33 @@ document.addEventListener("DOMContentLoaded", function() {
     <a href="https://www.accuweather.com/en/in/mukteshwar/3014461/weather-forecast/3014461" class="weather"><i class="fa fa-cloud"></i></a>
     <a href="https://www.tripadvisor.co.uk/Hotel_Review-g1162527-d26876576-Reviews-Ecoescape_Mukteshwar-Mukteshwar_Nainital_District_Uttarakhand.html" class="tripadvisor"><img src="image/tripadvisor.svg" alt="Trip Advisor"></a>
   </div>
-
+  
   <script>
-    function toggleIconBar() {
-      var iconBar = document.getElementById("iconBar");
-      var toggleButton = document.querySelector(".toggle-button i");
-
-      if (iconBar.style.transform === "translateX(-100%)") {
-        iconBar.style.transform = "translateY(-50%)";
-        iconBar.style.left = "0";
-        toggleButton.parentElement.style.left = "50px";
-        toggleButton.className = "fas fa-chevron-left";
-      } else {
-        iconBar.style.transform = "translateX(-100%)";
-        iconBar.style.left = "-200px";  // Adjust this value based on the width of your icon bar
-        toggleButton.parentElement.style.left = "0";
-        toggleButton.className = "fas fa-chevron-right";
-      }
+    // Set the initial position of the toggle button on page load
+  window.onload = function() {
+    var toggleButtonParent = document.querySelector(".toggle-button");
+    toggleButtonParent.style.left = "0"; // Set initial position to 0px
+  };
+  
+  function toggleIconBar() {
+    var iconBar = document.getElementById("iconBar");
+    var toggleButton = document.querySelector(".toggle-button i");
+    var toggleButtonParent = toggleButton.parentElement;
+  
+    if (iconBar.style.left === "-200px" || iconBar.style.left === "") {
+      // Show the icon bar, move the toggle button to 50px left, and change the icon to chevron-left
+      iconBar.style.left = "0";
+      toggleButtonParent.style.left = "50px"; // Move to 50px left
+      toggleButton.className = "fas fa-chevron-left";
+    } else {
+      // Hide the icon bar, move the toggle button back to 0px left, and change the icon to chevron-right
+      iconBar.style.left = "-200px";
+      toggleButtonParent.style.left = "0"; // Move back to 0px left
+      toggleButton.className = "fas fa-chevron-right";
     }
+  }
+  
+  
   </script>
   <a href="https://wa.me/919667846787?text=Name%3A%0AEmail%3A%0AMobile%20Number%3A%0AWhere%20are%20you%20from%3A%0ACheck%20In%3A%0ACheck%20Out%3A%0ANo%20of%20rooms%3A%0AType%20of%20rooms%3A%0A" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
 
