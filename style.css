@@ -801,7 +801,7 @@ figcaption {
   background-color: #f5f5f5; 
   padding: 20px 0;
   margin-left: 25%;
-  padding-bottom: 10%;
+  padding-bottom: 5%;
 }
 
 .formcontainer {
@@ -990,9 +990,9 @@ header .carousel-inner .item {
     .rooms-container {
       grid-template-columns: 1fr;
     }
-    .enquirenow{
+    /* .enquirenow{
       padding-bottom: 35% !important;
-    }
+    } */
     .testimonial-widget{
       display: block;
     }    
@@ -1066,14 +1066,10 @@ header .carousel-inner .item {
   .mb-5 {
     margin-bottom: 0 !important;
   }
-}
-  
-@media (max-width: 330px) {
-  .formcontainer {
-      width: 100% !important;
-  }
-  .enquirenow{
-    margin-left: 0%;
+
+  .weatherwidget-io{
+    margin-left: 0% !important;
+    margin-bottom: 30% !important;
   }
 }
 
@@ -1148,7 +1144,7 @@ header .carousel-inner .item {
   left: 0;
   width: 100%;
   height: 100px;
-  background: url("https://i.ibb.co/wQZVxxk/wave.png");
+  background: url("image/wave.png");
   background-size: 1000px 100px;
   z-index: 1;
 }
@@ -1201,16 +1197,51 @@ header .carousel-inner .item {
   right: 10%;
   bottom: 35%;
 }
+/* Default Styles for Larger Screens */
+.weather-today {
+  background-color: #f5f5f5;
+  padding-bottom: 10%;
+}
 
-/* Show the widget only on screens wider than 900px */
+.weather-today h3 {
+  text-align: center;
+  font-size: 32px;
+  font-family: 'Lato';
+  font-weight: bold;
+}
+
+.weatherwidget-io {
+  margin-left: 30%; /* Default margin for larger screens (laptops and up) */
+}
+
+/* For screens larger than 900px (laptop and up) */
 @media (min-width: 900px) {
   .tripadvisor-widget {
-      display: block;
+    display: block;
   }
 }
 
-@media (min-width: 1500px){
-  .slider{
+/* For screens 1500px and larger */
+@media (min-width: 1500px) {
+  .slider {
     margin-left: 30%;
+  }
+}
+
+/* For Mobile (screens smaller than 330px) */
+@media (max-width: 330px) {
+  .formcontainer {
+    width: 100% !important; /* Ensure form takes up full width */
+  }
+
+  .enquirenow {
+    margin-left: 0%;
+  }
+}
+
+@media (max-width: 1040px) {
+  .weatherwidget-io{
+    margin-left: 40%;
+    margin-bottom: 10%;
   }
 }
